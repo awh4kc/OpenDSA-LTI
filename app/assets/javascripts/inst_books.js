@@ -2,6 +2,7 @@
   var textFile = null; // Temporary global variable used for download link.
 
   /*
+
    * Checks if a json file has been defined and, if not, prompts the user to select one.
    */
   $(document).ready(function() {
@@ -289,7 +290,7 @@
 
     Handlebars.registerHelper('hideSec', function(key) {
       // Add key == "showsection" here to hide the show section radio buttons.
-      if (key == "lms_assignment_id" || key == "lms_item_id" || key == "hard_deadline" || key == "showsection") {
+      if (key == "lms_assignment_id" || key == "lms_item_id" || key == "hard_deadline") {
         return "hidden";
       } else if (key.includes("CON")) {
         return "hidden";
@@ -343,7 +344,7 @@
 
     Handlebars.registerHelper('secCheck', function(key, value, parent, mod, chapter) {
       if (key == "required" || key == "showsection") {
-        if (value == "true") {
+        if (value == true) {
           return new Handlebars.SafeString("<form data-name=\"" + parent + "\" data-key=\"true\" class=\"odsa_form\"><label><input data-type=\"radio\" type=\"radio\" name=\"" + parent + "\" value=\"true\" checked>True</label><label><input data-type=\"radio\" type=\"radio\" name=\"" + parent + "\" value=\"false\">False</label></form>");
         } else {
           return new Handlebars.SafeString("<form data-name=\"" + parent + "\" data-key=\"false\" class=\"odsa_form\"><label><input data-type=\"radio\" type=\"radio\" name=\"" + parent + "\" value=\"true\">True</label><label><input data-type=\"radio\" type=\"radio\" name=\"" + parent + "\" value=\"false\" checked>False</label></form>");
