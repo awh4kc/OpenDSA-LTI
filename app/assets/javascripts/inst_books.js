@@ -273,6 +273,12 @@
     }
   }
 
+  var properCase = function(str) {
+    var cased = str.toLowerCase();
+    cased = cased.replace(/(^| )(\w)/g, function(x) { return x.toUpperCase(); });
+    return cased;
+  }
+
   /*
    * Function to read in a json object and convert it into the
    * proper html to be dispayed to the user.
@@ -317,28 +323,28 @@
 
     Handlebars.registerHelper('keyCheck', function(key) {
       if (key == "long_name") {
-        return "long name";
+        return "Long Name";
       } else if (key == "resource_type") {
-        return "resource type";
+        return "Resource Type";
       } else if (key == "resource_name") {
-        return "resource name";
+        return "Resource Name";
       } else if (key == "exer_options") {
-        return "exercise options";
+        return "Exercise Options";
       } else if (key == "learning_tool") {
-        return "learning tool";
+        return "Learning Tool";
       } else if (key == "showsection") {
-        return "show section";
+        return "Show Section";
       } else if (key == "lms_item_id") {
-        return "lms item id";
+        return "Lms Item Id";
       } else if (key == "lms_assignment_id") {
-        return "lms assignment id";
+        return "Lms Assignment Id";
       } else if (key == "soft_deadline" || key == "due_date") {
         //return "soft deadline";
-        return "due date";
+        return "Due Date";
       } else if (key == "hard_deadline") {
-        return "hard deadline";
+        return "Hard Deadline";
       } else {
-        return key;
+        return properCase(key);
       }
     });
 
@@ -385,27 +391,27 @@
     });
 
     var hSource = "<ul class=\"odsa_ul\">" +
-       "<li class='odsa_li' hidden> <a data-key=\"inst_book_id\"> instance book id: </a> <input value=\"{{inst_book_id}}\"> </li>" +
-       "<li class='odsa_li'> <a data-key=\"title\"> title: </a> <input id=\"book-title\" value=\"{{title}}\"> </li>" +
-       "<li class='odsa_li'> <a data-key=\"desc\">description: </a> <input id=\"book-desc\" value=\"{{desc}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"inst_book_id\"> Instance Book Id: </a> <input value=\"{{inst_book_id}}\"> </li>" +
+       "<li class='odsa_li'> <a data-key=\"title\"> Title: </a> <input id=\"book-title\" value=\"{{title}}\"> </li>" +
+       "<li class='odsa_li'> <a data-key=\"desc\"> Description: </a> <input id=\"book-desc\" value=\"{{desc}}\"> </li>" +
        "</ul>";
     var hTemplate = Handlebars.compile(hSource);
     var hhtml = hTemplate(data);
     $('#heading').html(hhtml);
 
     var oSource = "<ul class=\"odsa_ul\">" +
-       "<li class='odsa_li' hidden> <a data-key=\"course_id\"> course id: </a> <input value=\"{{course_id}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"LMS_url\"> LMS url: </a> <input value=\"{{LMS_url}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"build_dir\"> build directory: </a> <input value=\"{{build_dir}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"code_dir\"> code directory: </a> <input value=\"{{code_dir}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"lang\"> language: </a> <input value=\"{{lang}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"code_lang\"> code language: </a> <input value=\"{}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"build_JSAV\"> build JSAV: </a> <input value=\"{{build_JSAV}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"tabbed_codeinc\"> tabbed code inc: </a> <input value=\"{{tabbed_codeinc}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"build_cmap\"> build cmap: </a> <input value=\"{{build_cmap}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"suppress_todo\"> suppress todo: </a> <input value=\"{{suppress_todo}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"assumes\"> assumes: </a> <input value=\"{{assumes}}\"> </li>" +
-       "<li class='odsa_li' hidden> <a data-key=\"dispModComp\"> display Mod Comp: </a> <input value=\"{{dispModComp}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"course_id\"> Course Id: </a> <input value=\"{{course_id}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"LMS_url\"> Lms Url: </a> <input value=\"{{LMS_url}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"build_dir\"> Build Directory: </a> <input value=\"{{build_dir}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"code_dir\"> Code Directory: </a> <input value=\"{{code_dir}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"lang\"> Language: </a> <input value=\"{{lang}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"code_lang\"> Code Language: </a> <input value=\"{}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"build_JSAV\"> Build JSAV: </a> <input value=\"{{build_JSAV}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"tabbed_codeinc\"> Tabbed Code Inc: </a> <input value=\"{{tabbed_codeinc}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"build_cmap\"> Build Cmap: </a> <input value=\"{{build_cmap}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"suppress_todo\"> Suppress Todo: </a> <input value=\"{{suppress_todo}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"assumes\"> Assumes: </a> <input value=\"{{assumes}}\"> </li>" +
+       "<li class='odsa_li' hidden> <a data-key=\"dispModComp\"> Display Mod Comp: </a> <input value=\"{{dispModComp}}\"> </li>" +
        "</ul>";
     var oTemplate = Handlebars.compile(oSource);
     var ohtml = oTemplate(data);
