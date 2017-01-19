@@ -127,3 +127,8 @@ form.odsa_form {
   width: 13%;
   margin: 10px;
 }
+
+.timemodal-div {
+	display: inline-block;
+	width: 90%;
+}

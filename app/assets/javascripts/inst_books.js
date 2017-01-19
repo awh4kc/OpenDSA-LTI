@@ -19,33 +19,16 @@
   });
 
   /*
-   * Defines the class 'datetimepicker' as a bootstrap datetimepicker.
+   * Defines the class 'timemodal' as a bootstrap datetimepicker.
    */
    $(document).on('focus', '.timemodal', function() {
-	$(this).parent().css("position", "relative");
     $(this).parent().datetimepicker({
       showClose: true,
-      sideBySide: true,
       keepInvalid: true,
 	    allowInputToggle: true,
-      format: "YYYY-MM-DD HH:MM:SS"
+      format: "YYYY-MM-DD HH:mm:ss"
     });
    });
-
-  /*
-   * Defines the class 'datetimepicker' as a bootstrap datetimepicker.
-   */
-  $(document).on('click', '.input-group-addon', function() {
-    $(this).parent().css("position", "relative");
-    $(this).parent().datetimepicker({
-      showClose: true,
-      sideBySide: true,
-	    keepInvalid: true,
-	    allowInputToggle: true,
-      format: "YYYY-MM-DD HH:MM:SS"
-    });
-	$(this).parent().data("DateTimePicker").show();
-  });
 
   /*
    * Sets the value attribute of an input tag when the user changes it.
@@ -253,14 +236,26 @@
    * Function to return the html to make a datetimepicker object.
    */
   var datepick = function(value, parent, mod, chapter) {
-    //var html = "<input class=\"datetimepicker\" data-chapter=\"" + chapter + "\" data-type=\"soft\" type=\"text\" value=\"" + value + "\"/>";
-
     var html = "<div class='col-sm-3 input-group date datetimepicker'>";
     html += "<input class=\"form-control date-input\" data-source=\" Chapter: " + chapter + ", Module: " + mod + ", Section: " + parent + "\" data-chapter=\"" + chapter + "\" data-type=\"soft\" type=\"text\" value=\"" + value + "\" />";
     html += "<span class='input-group-addon'><span class='glyphicon glyphicon-calendar'></span></span>";
     html += "</div>";
     return html;
   }
+
+  /*
+   * Defines the class 'date' as a bootstrap datetimepicker.
+   */
+    var makeDates = function() {
+      $('.date').each(function(index, element) {
+        $(element).datetimepicker( {
+          showClose: true,
+          keepInvalid: true,
+          sideBySide: true,
+          format: "YYYY-MM-DD HH:mm:ss"
+        });
+      });
+    };
 
   /*
    * Function to check if a given input is not a radio button.
@@ -635,6 +630,7 @@
 
     addClasses();
 	  sizeInputs();
+    makeDates();
   }
 
   /*
@@ -649,6 +645,7 @@
 
     addClasses();
 	  sizeInputs();
+    makeDates();
   }
 
   /*

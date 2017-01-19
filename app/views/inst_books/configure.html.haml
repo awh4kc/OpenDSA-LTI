@@ -30,10 +30,12 @@
       .modal-body
         / Soft Deadline:
         Due Date:
-        %input#chapterSoft.datetimepicker.timemodal
+        .timemodal-div
+          %input#chapterSoft.datetimepicker.timemodal
         / %br
         / Hard Deadline:
-        / %input#chapterHard.datetimepicker.timemodal
+        .timemodal-div
+          / %input#chapterHard.datetimepicker.timemodal
       .modal-footer
         %button#chapterSubmit.btn.btn-default{"data-dismiss" => "modal"} Submit
   #header
