@@ -28,7 +28,7 @@
       sideBySide: true,
       keepInvalid: true,
 	    allowInputToggle: true,
-      format: "YYYY-MM-DD HH:MM"
+      format: "YYYY-MM-DD HH:MM:SS"
     });
    });
 
@@ -42,7 +42,7 @@
       sideBySide: true,
 	    keepInvalid: true,
 	    allowInputToggle: true,
-      format: "YYYY-MM-DD HH:MM"
+      format: "YYYY-MM-DD HH:MM:SS"
     });
 	$(this).parent().data("DateTimePicker").show();
   });
