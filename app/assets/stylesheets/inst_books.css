@@ -132,3 +132,7 @@ form.odsa_form {
 	display: inline-block;
 	width: 90%;
 }
+
+.glyphicon-th-list {
+	cursor: grab;
+}
