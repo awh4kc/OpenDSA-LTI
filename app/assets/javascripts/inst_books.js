@@ -94,7 +94,7 @@
    * The click event for the 'Save Book' button.
    */
 
-  /* The old version that saves the book as a downloadable file. Used for testing.
+   /*The old version that saves the book as a downloadable file. Used for testing.
    $(document).on('click', '#odsa-save', function() {
      var download = document.getElementById('downloadLink');
 
@@ -105,7 +105,7 @@
      alert("Ready for Download!");
      $('#downloadLink').toggle();
    });
-   */
+  */
 
   $(document).on('click', '#odsa-submit-co', function(e) {
     handleSubmit();
@@ -257,6 +257,32 @@
       });
     };
 
+    /*
+     * Defines the class 'spin' as a jquery ui spinner.
+     */
+    var makeSpin = function() {
+      $('.spin').each(function(index, element) {
+        $(element).spinner();
+      });
+    };
+
+    /*
+     * Removes the jquery ui spinner from the class 'spin'.
+     */
+    var destroySpin = function() {
+      $('.spin').each(function(index, element) {
+          $(element).spinner('destroy');
+      });
+    };
+
+    /*
+     * Function to call all widget definitions.
+     */
+     var makeWidget = function() {
+       makeDates();
+       makeSpin();
+     };
+
   /*
    * Function to check if a given input is not a radio button.
    */
@@ -362,8 +388,8 @@
           value = null;
         }
         return new Handlebars.SafeString(datepick(value, parent, mod.long_name, chapter));
-      } else if (typeof(value) === 'object') {
-        return new Handlebars.SafeString("<input value=\"" + value + "\" hidden>");
+      } else if (typeof(value) === "object") {
+        return new Handlebars.SafeString("<input value=\"" + JSON.stringify(value) + "\" hidden>");
       } else if (key == "long_name") {
         return new Handlebars.SafeString("<input value=\"" + value + "\" disabled>");
       } else {
@@ -373,12 +399,12 @@
 
     Handlebars.registerHelper('exCheck', function(key, value, parent, parentOb, section, mod, chapter) {
       if (key == "points") {
-        return new Handlebars.SafeString("<input class=\"points\" data-source=\" Chapter: " + chapter + ", Module: " + mod.long_name + ", Section: " + section + ", Exercise: " + parentOb.long_name + "\" value=\"" + value + "\">");
+        return new Handlebars.SafeString("<input class=\"points spin\" data-source=\" Chapter: " + chapter + ", Module: " + mod.long_name + ", Section: " + section + ", Exercise: " + parentOb.long_name + "\" value=\"" + value + "\">");
       } else if (key == "threshold") {
         if(parent.includes("CON")) {
           return new Handlebars.SafeString("<input value=\"" + value + "\">");
         } else {
-          return new Handlebars.SafeString("<input class=\"threshold\" data-source=\" Chapter: " + chapter + ", Module: " + mod.long_name + ", Section: " + section + ", Exercise: " + parentOb.long_name + "\" value=\"" + value + "\">");
+          return new Handlebars.SafeString("<input class=\"threshold spin\" data-source=\" Chapter: " + chapter + ", Module: " + mod.long_name + ", Section: " + section + ", Exercise: " + parentOb.long_name + "\" value=\"" + value + "\">");
         }
       } else {
         return new Handlebars.SafeString("<input value=\"" + value + "\">");
@@ -494,10 +520,13 @@
       } else if (fileArray[i].startsWith("input") && checkRadio(fileArray[i])) {
         var value = pullValue(fileArray[i]);
         value = value.replace(/"="/g, '');
-        value = value.replace(/"/g, '\\"');
-        if (value === "true" || value === "false" || value === "null" || (!isNaN(parseFloat(value)) && !(value.includes("-")) && !(value.includes("/")))) {
+        if (value === "true" || value === "false" || value === "null" || (!isNaN(parseFloat(value)) && !(value.includes("-")) && !(value.includes("/"))) || value.includes("{")) {
+          if(value.includes("long_name")) {
+            value = value.replace(/\slong_name/g, 'long_name');
+          }
           line = value;
         } else {
+          value = value.replace(/"/g, '\\"');
           line = "\"" + value + "\"";
         }
         if ((i + 2 < fileArray.length) && (fileArray[i + 2].startsWith("li"))) {
@@ -545,6 +574,8 @@
    * Function to build a json file from the html on the page.
    */
   var buildJSON = function() {
+    destroySpin();
+
     var json = "{\n";
     var spacing = "  ";
 
@@ -568,6 +599,8 @@
     json += "\n}";
 
     json = json.replace(/"sections": "null"/g, "\"sections\": {}");
+
+    makeSpin();
 
     return json;
   }
@@ -630,7 +663,7 @@
 
     addClasses();
 	  sizeInputs();
-    makeDates();
+    makeWidget();
   }
 
   /*
@@ -645,7 +678,7 @@
 
     addClasses();
 	  sizeInputs();
-    makeDates();
+    makeWidget();
   }
 
   /*
