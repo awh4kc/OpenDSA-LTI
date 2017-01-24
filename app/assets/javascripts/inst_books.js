@@ -252,7 +252,8 @@
           showClose: true,
           keepInvalid: true,
           sideBySide: true,
-          format: "YYYY-MM-DD HH:mm:ss"
+          format: "YYYY-MM-DD HH:mm:ss",
+          widgetParent: $(element)
         });
       });
     };
