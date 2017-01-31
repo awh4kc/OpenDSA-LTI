@@ -251,7 +251,6 @@
         $(element).datetimepicker( {
           showClose: true,
           keepInvalid: true,
-          sideBySide: true,
           format: "YYYY-MM-DD HH:mm:ss"
         });
       });
@@ -503,6 +502,10 @@
     var cTemplate = Handlebars.compile(cSource);
     var chtml = cTemplate(data);
     $('#chapters').html(chtml);
+	
+	$('.odsa_ul > li ul').each(function(index, element) {
+        $(element).hide();
+    });
   }
 
   /*

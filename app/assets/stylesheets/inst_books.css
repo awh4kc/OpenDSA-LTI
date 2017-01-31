@@ -13,7 +13,6 @@ ul.odsa_ul {
 }
 
 ul.odsa_ul li ul {
-	display: none;
 	padding-left: 0;
 	border: 2px solid #f8eedf;
 	border-radius: 5px;
@@ -135,4 +134,8 @@ form.odsa_form {
 
 .glyphicon-th-list {
 	cursor: grab;
+}
+
+.bootstrap-datetimepicker-widget {
+	background-color: white;
 }
