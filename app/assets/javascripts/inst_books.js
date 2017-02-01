@@ -502,9 +502,11 @@
     var cTemplate = Handlebars.compile(cSource);
     var chtml = cTemplate(data);
     $('#chapters').html(chtml);
-	
+
 	$('.odsa_ul > li ul').each(function(index, element) {
+      if(!$(element).hasClass('dropdown-menu')) {
         $(element).hide();
+      }
     });
   }
 
