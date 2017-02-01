@@ -136,6 +136,6 @@ form.odsa_form {
 	cursor: grab;
 }
 
-.bootstrap-datetimepicker-widget {
+div.bootstrap-datetimepicker-widget table {
 	background-color: white;
 }
