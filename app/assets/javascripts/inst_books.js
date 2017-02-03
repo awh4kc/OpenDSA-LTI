@@ -94,7 +94,7 @@
    * The click event for the 'Save Book' button.
    */
 
-   /*The old version that saves the book as a downloadable file. Used for testing.
+   /* The old version that saves the book as a downloadable file. Used for testing.
    $(document).on('click', '#odsa-save', function() {
      var download = document.getElementById('downloadLink');
 
@@ -105,7 +105,7 @@
      alert("Ready for Download!");
      $('#downloadLink').toggle();
    });
-  */
+   */
 
   $(document).on('click', '#odsa-submit-co', function(e) {
     handleSubmit();
@@ -405,7 +405,9 @@
         } else {
           return new Handlebars.SafeString("<input class=\"threshold spin\" data-source=\" Chapter: " + chapter + ", Module: " + mod.long_name + ", Section: " + section + ", Exercise: " + parentOb.long_name + "\" value=\"" + value + "\">");
         }
-      } else {
+      } else if(typeof(value) === "object") {
+		return new Handlebars.SafeString("<input value=\"" + value + "\">");
+	  } else {
         return new Handlebars.SafeString("<input value=\"" + value + "\">");
       }
     });
