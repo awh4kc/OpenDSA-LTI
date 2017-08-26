@@ -4,8 +4,11 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
   config.clear_action_items!
   actions :all, except: [:new]
 
-  menu :label => "Book Instances",parent: 'OpenDSA Books', priority: 20
-  permit_params :template, :title, :desc, :course_offering_id, :user_id
+  menu label: "Book Instances", parent: 'OpenDSA Books', priority: 20
+  permit_params :template, :title, :desc, :course_offering_id, :user_id, :book_type
+
+  member_action :update_configuration, method: :get do
+  end
 
   member_action :clone, method: :get do
   end
@@ -20,7 +23,6 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
   end
 
   action_item only: :index do |inst_book|
-    # link_to 'Upload Books', upload_books_admin_inst_books_path() if authorized? :upload_books, inst_book
     link_to 'Upload Books', upload_books_admin_inst_books_path(inst_book)
   end
 
@@ -33,13 +35,25 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
     link_to "Delete", { action: :destroy }, method: :delete, data: { confirm: message}
   end
 
-
   controller do
+    def scoped_collection
+      InstBook.joins(:course_offering).where('course_offerings.archived = false').
+      union(InstBook.where("template = ?", 1))
+    end
+
     def clone
       inst_book = InstBook.find(params[:id])
       title = inst_book.title
       cloned_inst_book = inst_book.clone(current_user)
       redirect_to admin_inst_books_path, notice: "Book instance ID:'#{inst_book.id}' title:'#{title}' was cloned successfully!. The new Book Instance ID is '#{cloned_inst_book.id}'"
+    end
+
+    def update_configuration
+      if !authorized? :update_configuration
+        redirect_to admin_inst_books_path
+      end
+      @inst_book = InstBook.find(params[:id])
+      render 'upload_books'
     end
 
     def upload_books
@@ -50,7 +64,12 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
 
     def upload_create
       hash = JSON.load(File.read(params[:form][:file].path))
-      InstBook.save_data_from_json(hash, current_user)
+      if params.has_key?(:inst_book)
+        InstBook.save_data_from_json(hash, current_user, params[:inst_book]["id"])
+      else
+        InstBook.save_data_from_json(hash, current_user)
+      end
+
 
       redirect_to admin_inst_books_path, notice: 'Book configuration uploaded successfully!'
     end
@@ -68,7 +87,7 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
       inst_book = InstBook.find(params[:id])
       title = inst_book.title
       inst_book.destroy
-      redirect_to admin_inst_books_path, notice: "Book instance '#{title}' was deleted successfully!"
+      redirect_to admin_inst_books_path, notice: "Book configuration '#{title}' was deleted successfully!"
     end
   end
 
@@ -77,8 +96,8 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
   index do
     id_column
     column :title
-    column :desc
-    column :template
+    # column :desc
+    column 'Template?', :template
     if current_user.global_role.is_admin?
       column "Owner", :user
     end
@@ -96,6 +115,10 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
         links += ' '
       end
       links += link_to "Clone", clone_admin_inst_book_path(inst_book)
+      if authorized? :update_configuration, inst_book
+        links += link_to "Update Configuration", update_configuration_admin_inst_book_path(inst_book)
+        links += ' '
+      end
       links
     end
 
@@ -114,6 +137,9 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
         if f.object.course_offering_id == nil
           f.input :template
         end
+      end
+      if current_user.global_role.is_admin?
+        f.input :book_type, as: :select, collection: InstBook.book_types.keys
       end
       f.input :title
       f.input :desc

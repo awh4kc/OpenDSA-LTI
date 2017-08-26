@@ -42,8 +42,11 @@ class CourseOffering < ActiveRecord::Base
 
   accepts_nested_attributes_for :term
 
+  scope :active, -> { where(archived: false) }
+
   scope :by_date,
     -> { includes(:term).order('terms.starts_on DESC', 'label ASC') }
+
   scope :managed_by_user, -> (u) { joins{course_enrollments}.
    where{ course_enrollments.user == u &&
     course_enrollments.course_role_id == CourseRole::INSTRUCTOR_ID } }
@@ -104,6 +107,13 @@ class CourseOffering < ActiveRecord::Base
   #
   def students
     course_enrollments.where(course_role: CourseRole.student).map(&:user)
+  end
+
+  # -------------------------------------------------------------
+  # Public: Gets all inst_books used in this CourseOffering.
+  #
+  def odsa_books
+    inst_books
   end
 
 

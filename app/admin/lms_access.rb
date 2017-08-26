@@ -1,12 +1,11 @@
 ActiveAdmin.register LmsAccess, sort_order: :created_at_asc do
   includes :lms_instance, :user
-  active_admin_import
 
   before_build do |record|
     record.user = current_user
   end
 
-  menu :label => "LMS Accesses", parent: 'LMS config', priority: 30
+  menu label: "LMS Accesses", parent: 'LMS config', priority: 30
   permit_params :lms_instance_id, :user_id, :access_token
 
   index do
@@ -16,6 +15,9 @@ ActiveAdmin.register LmsAccess, sort_order: :created_at_asc do
     end
     column :user, sortable: 'user.display_name' do |c|
       link_to c.user.display_name, admin_user_path(c.user)
+    end
+    column :user, sortable: 'user.email' do |c|
+      link_to c.user.email, admin_user_path(c.user)
     end
     column :access_token do |c|
       link_to c.access_token, admin_lms_access_path(c)

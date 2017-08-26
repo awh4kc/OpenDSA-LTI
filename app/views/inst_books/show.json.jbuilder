@@ -41,6 +41,7 @@ json.chapters do
 
                # section object
                 json.set! section_name do
+                  json.set! :id, inst_section.id
                   json.set! :soft_deadline, inst_section.soft_deadline.try(:strftime, "%Y-%m-%d %H:%m:%S")
                   json.set! :hard_deadline, inst_section.soft_deadline.try(:strftime, "%Y-%m-%d %H:%m:%S")
                   json.set! :showsection, inst_section.show
@@ -60,6 +61,7 @@ json.chapters do
                       for inst_book_section_exercise in exercises
                         exercise_name = InstExercise.where(:id => inst_book_section_exercise.inst_exercise_id).first.short_name
                         json.set! exercise_name do
+                          json.set! :id, inst_book_section_exercise.id
                           json.set! :long_name, InstExercise.where(:id => inst_book_section_exercise.inst_exercise_id).first.name
                           json.set! :required, inst_book_section_exercise.required
                           json.set! :points, inst_book_section_exercise.points.to_f

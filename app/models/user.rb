@@ -8,9 +8,7 @@ class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :email_or_id
 
-
   #~ Relationships ............................................................
-
   belongs_to  :global_role
   belongs_to  :time_zone
   has_many    :course_enrollments, -> { includes :course_role, :course_offering }, inverse_of: :user, dependent: :destroy
@@ -36,6 +34,24 @@ class User < ActiveRecord::Base
     :omniauth_providers => [:facebook, :google_oauth2, :cas]
 
   before_create :set_default_role
+
+  after_save :update_lms_access
+
+  def update_lms_access
+    if self.global_role.is_instructor? or self.global_role.is_admin?
+        lms_access = LmsAccess.where("user_id = ?", self.id).first
+      if !lms_access
+          lms_access = LmsAccess.new(
+                                 lms_instance: LmsInstance.first,
+                                 user: self)
+      end
+      if !lms_access.consumer_key? or !lms_access.consumer_secret?
+          lms_access.consumer_key = self.email
+          lms_access.consumer_secret = self.encrypted_password
+          lms_access.save!
+      end
+    end
+  end
 
   paginates_per 100
 
@@ -118,14 +134,23 @@ class User < ActiveRecord::Base
 
   # -------------------------------------------------------------
   def course_offerings_for_term(term, course)
-    conditions = { term: term, 'users.id' => self }
+    conditions = { term: term, 'course_offerings.archived' => false}
+    if !self.global_role.is_admin?
+      conditions['users.id'] = self
+    end
     if course
       conditions[:course] = course
     end
-    CourseOffering.
-      joins(course_enrollments: :user).
-      where(conditions).
-      distinct
+    if !self.global_role.is_admin?
+      CourseOffering.
+        joins(course_enrollments: :user).
+        where(conditions).
+        distinct
+    else
+      CourseOffering.
+        where(conditions).
+        distinct
+    end
   end
 
 
@@ -145,6 +170,10 @@ class User < ActiveRecord::Base
     last_name.blank? ?
       (first_name.blank? ? email : first_name) :
       (first_name.blank? ? last_name : (first_name + ' ' + last_name))
+  end
+
+  def user_display_name
+    first_name + ' ' + last_name + ' - ' + email
   end
 
 
@@ -250,6 +279,14 @@ class User < ActiveRecord::Base
   # -------------------------------------------------------------
   def normalize_friendly_id(value)
     value.split('@').map{ |x| CGI.escape x }.join('@')
+  end
+
+  def get_lms_creds
+    self.update_lms_access
+    lms_access = LmsAccess.where(user_id: self.id).first
+    consumer_key = lms_access.consumer_key
+    consumer_secret = lms_access.consumer_secret
+    {consumer_key => consumer_secret}
   end
 
 

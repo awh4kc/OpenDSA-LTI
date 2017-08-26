@@ -12,8 +12,72 @@ class CourseOfferingsController < ApplicationController
   # -------------------------------------------------------------
   # GET /course_offerings/1
   def show
+    @course_offering = CourseOffering.find_by(id: params[:id])
+    @url = url_for(organization_course_path(
+                  @course_offering.course.organization,
+                  @course_offering.course,
+                  @course_offering.term))
+
+    @course_enrollment = CourseEnrollment.where("course_offering_id=?", @course_offering.id)
+    @student_list = []
+    #puts @course_enrollment.inspect
+    @course_enrollment.each do |s|
+      q = User.where("id=?", s.user_id).select("id, first_name, last_name")
+      @student_list.push(q)
+    end
+    @instBook = @course_offering.odsa_books.first
+
+    @exercise_list = Hash.new
+    chapters = InstChapter.where(inst_book_id: @instBook.id).order('position')
+    chapters.each do |chapter|
+      modules = InstChapterModule.where(inst_chapter_id: chapter.id).order('module_position')
+      modules.each do |inst_ch_module|
+        sections = InstSection.where(inst_chapter_module_id: inst_ch_module.id)
+        section_item_position = 1
+        if !sections.empty?
+          sections.each do |section|
+            title = (chapter.position.to_s.rjust(2, "0")||"") + "." +
+                    (inst_ch_module.module_position.to_s.rjust(2, "0")||"") + "." +
+                    section_item_position.to_s.rjust(2, "0") + " - "
+            learning_tool = nil
+            if section
+              title = title + section.name
+              learning_tool = section.learning_tool
+              if !learning_tool
+                if section.gradable
+                  @exercise_list[section.id] = title
+                end
+              end
+            end
+            section_item_position += 1
+          end
+        end
+      end
+    end
   end
 
+  # GET /course_offerings/:user_id/:inst_section_id
+  def find_attempts
+    @user_id = User.find_by(id: params[:user_id])
+    @inst_section = InstSection.find_by(id: params[:inst_section_id])
+    @inst_book_section_exercise = InstBookSectionExercise.where(inst_section_id: @inst_section.id).first #not sure about the first
+    @inst_book_section_exercise_id = @inst_book_section_exercise.id
+
+    @odsa_exercise_attempts = OdsaExerciseAttempt.where("inst_book_section_exercise_id=? AND user_id=?",
+                                 @inst_book_section_exercise_id, @user_id).select(
+                                 "id, user_id, question_name, request_type,
+                                 correct, worth_credit, time_done, time_taken, earned_proficiency, points_earned,
+                                 pe_score, pe_steps_fixed")
+    @odsa_exercise_progress = OdsaExerciseProgress.where("inst_book_section_exercise_id=? AND user_id=?",
+                                 @inst_book_section_exercise_id, @user_id).select("user_id, current_score, highest_score,
+                                 total_correct, proficient_date,first_done, last_done")
+
+    @attempts_json = ApplicationController.new.render_to_string(
+        template: 'course_offerings/find_attempts.json.jbuilder',
+        locals: {:@odsa_exercise_attempts => @odsa_exercise_attempts,
+                 :@odsa_exercise_progress => @odsa_exercise_progress,
+                 :@inst_section => @inst_section})
+  end
 
   # -------------------------------------------------------------
   # GET /course_offerings/new
@@ -57,11 +121,17 @@ class CourseOfferingsController < ApplicationController
         # Add course_offering to the new book
         cloned_book.course_offering_id = course_offering.id
         cloned_book.save!
+
         if !params['lms_access_token'].blank?
-          lms_access = LmsAccess.new(
-                                 lms_instance: lms_instance,
-                                 user: current_user,
-                                 access_token: params[:lms_access_token])
+          lms_access = LmsAccess.where("user_id = ?", current_user.id).first
+          if !lms_access
+            lms_access = LmsAccess.new(
+                                   lms_instance: lms_instance,
+                                   user: current_user,
+                                   access_token: params[:lms_access_token])
+            lms_access.save!
+          end
+          lms_access.access_token = params[:lms_access_token]
           lms_access.save!
         end
 
@@ -72,7 +142,7 @@ class CourseOfferingsController < ApplicationController
         enrollment.course_role_id = CourseRole.instructor.id
         enrollment.save!
       else
-        err_string = 'There was a problem while creating the workout.'
+        err_string = 'There was a problem while creating the course offering.'
         url = url_for new_course_offerings_path(notice: err_string)
       end
     end

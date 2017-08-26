@@ -24,65 +24,94 @@
 //= require cocoon
 //= require cm
 //= require book
-//= require course_offerings_form.js
+//= require counter.js
 //= require data-confirm-modal
 //= require moment
 //= require bootstrap-datetimepicker
 //= require mustache.min
 //= require handlebars.min
-
+//= require jstree
+//= require clipboard
 // Add the route helpers directly into the window object for easy access.
 $.extend(window, Routes);
 
 //use wysihtml5 rich text editor
 $(document).ready(function() {
 
-  $('.richtexteditor').each(function(i, elem) {
-    $(elem).wysihtml5({
-      "font-styles": false,
-      "emphasis": true,
-      "lists": true,
-      "link": false,
-      "html": true,
-      "image": false
+    $('.richtexteditor').each(function(i, elem) {
+        $(elem).wysihtml5({
+            "font-styles": false,
+            "emphasis": true,
+            "lists": true,
+            "link": false,
+            "html": true,
+            "image": false
+        });
     });
-  });
 });
 
 function progress(percent, $element) {
-  var progressBarWidth = percent * $element.width() / 100;
-  $element.find('div').animate({
-    width: progressBarWidth
-  }, 200).html(percent + "%&nbsp;");
+    var progressBarWidth = percent * $element.width() / 100;
+    $element.find('div').animate({
+        width: progressBarWidth
+    }, 200).html(percent + "%&nbsp;");
 }
 
 function percentBar(filled, capacity, id) {
-  var myCanvas = document.getElementById(id);
-  var back = myCanvas.getContext("2d");
-  var text = myCanvas.getContext("2d");
-  var textSize = 10;
-  var w = myCanvas.width;
-  var h = myCanvas.height;
-  var fillW = filled * w;
-  var capW = capacity * w;
-  var per = parseInt(filled * 100);
-  var gradient = back.createLinearGradient(100, 100, 0, 100, 100, 50);
-  gradient.addColorStop(0, "#3da2b4");
-  gradient.addColorStop(1, "white");
+    var myCanvas = document.getElementById(id);
+    var back = myCanvas.getContext("2d");
+    var text = myCanvas.getContext("2d");
+    var textSize = 10;
+    var w = myCanvas.width;
+    var h = myCanvas.height;
+    var fillW = filled * w;
+    var capW = capacity * w;
+    var per = parseInt(filled * 100);
+    var gradient = back.createLinearGradient(100, 100, 0, 100, 100, 50);
+    gradient.addColorStop(0, "#3da2b4");
+    gradient.addColorStop(1, "white");
 
-  text.textBaseline = "middle";
-  text.fillText("Text is here to stay", 0, myCanvas.height / 2);
+    text.textBaseline = "middle";
+    text.fillText("Text is here to stay", 0, myCanvas.height / 2);
 
-  back.fillStyle = "#000000";
-  back.fillRect(0, 0, w, h);
-  back.fillStyle = "#276874";
-  back.fillRect(0, 0, capW, h);
-  back.fillStyle = gradient;
-  back.fillRect(0, 0, fillW, h);
+    back.fillStyle = "#000000";
+    back.fillRect(0, 0, w, h);
+    back.fillStyle = "#276874";
+    back.fillRect(0, 0, capW, h);
+    back.fillStyle = gradient;
+    back.fillRect(0, 0, fillW, h);
 
 }
 $.fn.editable.defaults.mode = 'inline';
 
 $(document).ready(function() {
-  $('.xeditable').editable();
+    var clip = new Clipboard('.clipboard-btn');
+
+    clip.on('success', function(e) {
+        setTooltip(e.trigger, 'Copied!');
+        hideTooltip(e.trigger);
+    });
+
+    clip.on('error', function(e) {
+        setTooltip(e.trigger, 'Failed!');
+        hideTooltip(e.trigger);
+    });
+
+    $('.clipboard-btn').tooltip({
+        trigger: 'click',
+        placement: 'bottom'
+    });
+
+    function setTooltip(btn, message) {
+        $(btn).tooltip('hide')
+            .attr('data-original-title', message)
+            .tooltip('show');
+    }
+
+    function hideTooltip(btn) {
+        setTimeout(function() {
+            $(btn).tooltip('hide');
+        }, 1000);
+    }
+
 });

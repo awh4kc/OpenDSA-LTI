@@ -61,7 +61,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'mysql2'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>=3.4.2'
   gem 'annotate'
   gem 'rails-erd', github: 'voormedia/rails-erd'
   gem 'immigrant'
@@ -142,3 +142,7 @@ gem 'json'
 gem "browser"
 gem "figaro"
 gem 'data-confirm-modal'
+gem 'active_record_union'
+gem 'jstree-rails-4', '~> 3.2', '>= 3.2.1'
+gem 'clipboard-rails'
+gem "mustache", "~> 1.0"

@@ -75,6 +75,8 @@ GEM
     active_record-acts_as (1.0.5)
       activerecord (~> 4, >= 4.1.2)
       activesupport (~> 4)
+    active_record_union (1.2.0)
+      activerecord (>= 4.0)
     activemodel (4.1.6)
       activesupport (= 4.1.6)
       builder (~> 3.1)
@@ -150,6 +152,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     choice (0.1.6)
+    clipboard-rails (1.5.16)
     cocoon (1.2.6)
     codemirror-rails (5.6)
       railties (>= 3.0, < 5)
@@ -256,6 +259,7 @@ GEM
       railties (>= 3.2)
       sprockets-rails
     json (1.8.3)
+    jstree-rails-4 (3.2.1)
     jwt (1.0.0)
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
@@ -275,6 +279,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    mustache (1.0.3)
     mysql2 (0.3.15)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -363,22 +368,23 @@ GEM
     request-log-analyzer (1.13.4)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
-    rspec-core (3.1.5)
-      rspec-support (~> 3.1.0)
-    rspec-expectations (3.1.2)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.1.0)
-    rspec-mocks (3.1.2)
-      rspec-support (~> 3.1.0)
-    rspec-rails (3.1.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-rails (3.5.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 3.1.0)
-      rspec-expectations (~> 3.1.0)
-      rspec-mocks (~> 3.1.0)
-      rspec-support (~> 3.1.0)
-    rspec-support (3.1.1)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     ruby-graphviz (1.0.9)
     rubyzip (1.1.7)
     sass (3.2.19)
@@ -446,6 +452,7 @@ PLATFORMS
 DEPENDENCIES
   active_admin_import!
   active_record-acts_as
+  active_record_union
   active_skin!
   activeadmin!
   acts-as-taggable-on
@@ -470,6 +477,7 @@ DEPENDENCIES
   capistrano-rbenv!
   capistrano3-delayed-job (~> 1.0)
   capybara
+  clipboard-rails
   cocoon
   codemirror-rails
   coffee-rails (~> 4.0.0)
@@ -499,10 +507,12 @@ DEPENDENCIES
   jquery-ui-rails
   js-routes
   json
+  jstree-rails-4 (~> 3.2, >= 3.2.1)
   kaminari
   log_file
   loofah
   momentjs-rails (>= 2.9.0)
+  mustache (~> 1.0)
   mysql2
   nokogiri
   oj
@@ -523,7 +533,7 @@ DEPENDENCIES
   representable
   request-log-analyzer
   responders (~> 1.1)
-  rspec-rails
+  rspec-rails (>= 3.4.2)
   sass-rails
   sdoc
   sqlite3
@@ -537,4 +547,4 @@ DEPENDENCIES
   wannabe_bool
 
 BUNDLED WITH
-   1.13.6
+   1.13.7

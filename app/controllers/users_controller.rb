@@ -1,8 +1,13 @@
 class UsersController < InheritedResources::Base
   load_and_authorize_resource
 
-
   #~ Action methods ...........................................................
+  def show
+    if @user.global_role.is_instructor? or @user.global_role.is_admin?
+      @creds = current_user.get_lms_creds
+    end
+  end
+
   def edit_access
   end
   # -------------------------------------------------------------

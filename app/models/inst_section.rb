@@ -17,7 +17,6 @@ class InstSection < ActiveRecord::Base
   #~ Hooks ....................................................................
   #~ Class methods ............................................................
   def self.save_data_from_json(book, module_rec, inst_chapter_module_rec, section_name, section_obj, section_position, update_mode=false)
-    puts "inst_sections"
     inst_sec = InstSection.where("inst_chapter_module_id = ? AND inst_module_id = ? AND name = ?", inst_chapter_module_rec.id, module_rec.id, section_name).first
 
     if !update_mode or (update_mode and !inst_sec)
@@ -86,6 +85,17 @@ class InstSection < ActiveRecord::Base
     end
   end
 
+  def total_points
+    total_points = 0
+    inst_book_section_exercises.each do |bk_sec_ex|
+      bk_sec_ex_points = bk_sec_ex.points
+      if bk_sec_ex_points == nil
+        bk_sec_ex_points = 0
+      end
+      total_points = total_points + bk_sec_ex_points
+    end
+    return total_points
+  end
 
   #~ Private instance methods .................................................
 end

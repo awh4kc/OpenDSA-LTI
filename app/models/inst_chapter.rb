@@ -8,7 +8,7 @@ class InstChapter < ActiveRecord::Base
   #~ Hooks ....................................................................
   #~ Class methods ............................................................
   def self.save_data_from_json(book, chapter_name, chapter_obj, chapter_position, update_mode=false)
-    puts "inst_chapters"
+    # puts "inst_chapters"
     ch = InstChapter.where("inst_book_id = ? AND name = ?", book.id, chapter_name).first
 
     if !update_mode or (update_mode and !ch)
@@ -51,6 +51,18 @@ class InstChapter < ActiveRecord::Base
       end
     end
     return gradable_section
+  end
+
+  def total_points
+    total_points = 0
+    inst_chapter_modules.each do |chapter_module|
+      chapter_module_points = chapter_module.total_points
+      if chapter_module_points == nil
+        chapter_module_points = 0
+      end
+      total_points = total_points + chapter_module_points
+    end
+    return total_points
   end
 
   #~ Private instance methods .................................................

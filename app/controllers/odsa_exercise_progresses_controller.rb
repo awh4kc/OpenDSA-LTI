@@ -2,7 +2,6 @@ class OdsaExerciseProgressesController < ApplicationController
   # load_and_authorize_resource
 
   #~ Action methods ...........................................................
-
   def update
     inst_exercise = InstExercise.find_by(short_name: params[:exercise_name])
     inst_book_section_exercise = InstBookSectionExercise.where(
@@ -26,7 +25,6 @@ class OdsaExerciseProgressesController < ApplicationController
       end
       format.json  { render :json => msg }
     end
-
   end
 
   def show_exercise
@@ -48,18 +46,23 @@ class OdsaExerciseProgressesController < ApplicationController
   # Retrieves proficiency status of all exercises
   def show_section
     book_progress = OdsaBookProgress.where("user_id=? and inst_book_id=?",
-                                                                          current_user.id, params[:inst_book_id]).first
+                                           current_user.id, params[:inst_book_id]).first
     proficient_exercises = []
     if book_progress
       proficient_exercises = book_progress.get_proficient_exercises
     end
 
     respond_to do |format|
-
-      format.json  { render :json => {
-                                      :proficient_exercises => proficient_exercises}}
+      format.json  { render :json => {:proficient_exercises => proficient_exercises}}
     end
   end
 
+  def get_count
+    practiced_ex = OdsaExerciseProgress.count(:conditions => "proficient_date IS NOT NULL") + CodeWorkout::EXERCISES_SOLVED
+
+    respond_to do |format|
+      format.json  { render :json => {:practiced_ex => practiced_ex}}
+    end
+  end
   #~ Private instance methods .................................................
 end

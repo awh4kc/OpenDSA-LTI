@@ -7,6 +7,8 @@
   #~ Private instance methods .................................................
 class InstBook < ActiveRecord::Base
 
+  enum book_type: {Complete: 0, Exercises: 1}
+
   #~ Relationships ............................................................
   belongs_to :course_offering, inverse_of: :inst_books
   belongs_to :user, inverse_of: :inst_books
@@ -25,11 +27,10 @@ class InstBook < ActiveRecord::Base
   #~ Constants ................................................................
   #~ Hooks ....................................................................
   #~ Class methods ............................................................
-  def self.save_data_from_json(json, current_user)
-    puts "inst_books"
+  def self.save_data_from_json(json, current_user, inst_book=nil)
     book_data = json
     update_mode = false
-    inst_book_id = book_data['inst_book_id']
+    inst_book_id = inst_book
     options = {}
     options['build_dir'] = book_data['build_dir'] || "Books"
     options['code_dir'] = book_data['code_dir'] || "SourceCode/"
@@ -68,13 +69,6 @@ class InstBook < ActiveRecord::Base
   end
 
   #~ Instance methods .........................................................
-  # --------------------------------------------------------------------------
-  # return lms credintials associated with the course offering
-  def lms_creds
-    consumer_key = course_offering.lms_instance['consumer_key']
-    consumer_secret = course_offering.lms_instance['consumer_secret']
-    {consumer_key => consumer_secret}
-  end
 
   # --------------------------------------------------------------------------
   # clone book configuration
@@ -91,5 +85,18 @@ class InstBook < ActiveRecord::Base
       end
       return b
   end
+
+  def total_points
+    total_points = 0
+    inst_chapters.each do |chapter|
+      chapter_points = chapter.total_points
+      if chapter_points == nil
+        chapter_points = 0
+      end
+      total_points = total_points + chapter_points
+    end
+    return total_points
+  end
   #~ Private instance methods .................................................
 end
+
