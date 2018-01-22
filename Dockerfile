@@ -36,4 +36,4 @@ RUN chown -R app:app /home/app/webapp/
 RUN chmod -R 775 /home/app/webapp/
 
 # expose the port
-EXPOSE 300
+EXPOSE 3000
