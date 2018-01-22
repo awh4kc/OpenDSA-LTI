@@ -33,6 +33,8 @@ gem 'loofah'
 gem 'truncate_html'
 gem 'puma'
 gem 'tzinfo' # For timezone support
+gem 'mysql2', '~> 0.3.20'
+gem "dotenv-rails"
 
 # Bootstrap Datepicker
 gem 'momentjs-rails', '>= 2.9.0'
@@ -46,12 +48,6 @@ gem 'daemons'
 gem 'delayed_job_active_record'
 gem 'progress_job'
 
-
-# For JSON support
-gem 'rabl'
-gem 'oj'
-gem 'oj_mimic_json'
-
 group :assets do
   gem 'sass-rails'
   gem 'uglifier', '>= 1.3.0'
@@ -59,8 +55,6 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'mysql2'
   gem 'rspec-rails', '>=3.4.2'
   gem 'annotate'
   gem 'rails-erd', github: 'voormedia/rails-erd'
@@ -83,7 +77,6 @@ group :test do
 end
 
 group :production, :staging do
-  gem 'mysql2'
   gem 'faker'
 end
 
