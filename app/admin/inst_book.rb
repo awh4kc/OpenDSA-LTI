@@ -76,6 +76,8 @@ ActiveAdmin.register InstBook, sort_order: :created_at_asc do
         InstBook.save_data_from_json(hash, current_user)
       end
 
+
+
       redirect_to admin_inst_books_path, notice: 'Book configuration uploaded successfully!'
     end
 

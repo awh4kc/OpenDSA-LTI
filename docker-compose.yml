@@ -4,6 +4,9 @@ volumes:
   db-data:
     external: false
 
+  odsa-books:
+    external: false
+
 services:
   db:
     env_file: .env
@@ -16,10 +19,10 @@ services:
   app:
     env_file: .env
     build: .
-    volumes:
-      - "$PWD:/home/app/webapp"
     ports:
       - "3000:3000"
+    volumes:
+      - "odsa-books:/home/app/webapp/public/OpenDSA/Books"
     depends_on:
       - db
 
@@ -27,7 +30,7 @@ services:
     env_file: .env
     build: .
     volumes:
-      - "$PWD:/home/app/webapp"
+      - "odsa-books:/home/app/webapp/public/OpenDSA/Books"
     command: bundle exec rake jobs:work
     depends_on:
       - db
