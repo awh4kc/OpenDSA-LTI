@@ -38,6 +38,8 @@ RUN rm -f /etc/service/nginx/down
 # Configure Nginx and Passenger
 RUN rm /etc/nginx/sites-enabled/default
 ADD ./docker/webapp.conf /etc/nginx/sites-enabled/webapp.conf
+ADD ./server.crt /etc/nginx/server.crt
+ADD ./server.key /etc/nginx/server.key
 ADD ./docker/secret_key.conf /etc/nginx/main.d/secret_key.conf
 ADD ./docker/gzip_max.conf /etc/nginx/conf.d/gzip_max.conf
 

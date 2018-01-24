@@ -21,6 +21,7 @@ services:
     build: .
     ports:
       - "3000:3000"
+      - "443:443"
     volumes:
       - "odsa-books:/home/app/webapp/public/OpenDSA/Books"
     depends_on:
