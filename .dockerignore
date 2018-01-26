@@ -3,6 +3,12 @@ bundles
 vendor/pkg
 .go-pkg-cache
 .git
+.gitignore
+public/OpenDSA/.git
+public/OpenDSA/.gitignore
+public/OpenDSA/QBank
+public/OpenDSA/Doc
 certs
 deploy
 .idea
+ERD

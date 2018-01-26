@@ -7,6 +7,12 @@ volumes:
   odsa-books:
     external: false
 
+  odsa-tmp:
+    external: false
+
+  odsa-log:
+    external: false
+
 services:
   db:
     env_file: .env
@@ -26,6 +32,8 @@ services:
       - "443:443"
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
+      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
+      - "odsa-log:/home/app/OpenDSA-LTI/log"
     # command: bundle exec rake db:setup
     depends_on:
       - db
@@ -37,6 +45,8 @@ services:
     image: opendsa/opendsa-lti_app:1.0.0
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
+      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
+      - "odsa-log:/home/app/OpenDSA-LTI/log"
     command: bundle exec rake jobs:work
     depends_on:
       - db

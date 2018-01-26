@@ -7,6 +7,12 @@ volumes:
   odsa-books:
     external: false
 
+  odsa-tmp:
+    external: false
+
+  odsa-log:
+    external: false
+
 services:
   db:
     env_file: .env
@@ -18,22 +24,28 @@ services:
 
   app:
     env_file: .env
-    image: opendsa/opendsa-lti_app:1.0.0
+    image: opendsa/opendsa-lti_app:1.0.1
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
-    # command: bundle exec rake db:rest
-    # command: bundle exec rake db:populate
+      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
+      - "odsa-log:/home/app/OpenDSA-LTI/log"
     depends_on:
       - db
+    # command: ["./wait-for-it.sh", "db:3306", "--", "./docker-entrypoint.sh"]
+    tty: true
+
 
   jobs:
     env_file: .env
-    image: opendsa/opendsa-lti_app:1.0.0
+    image: opendsa/opendsa-lti_app:1.0.1
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
+      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
+      - "odsa-log:/home/app/OpenDSA-LTI/log"
     command: bundle exec rake jobs:work
     depends_on:
       - db
+    tty: true

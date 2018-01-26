@@ -9,11 +9,13 @@ RUN /pd_build/ruby-2.3.*.sh
 RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
-RUN apt-get update && \
-    apt-get upgrade -y -o Dpkg::Options::="--force-confold" && \
-    apt-get install -y software-properties-common apt-utils locales tzdata \
+RUN apt-get update && apt-get install -y \
+    software-properties-common apt-utils locales tzdata \
     mysql-client \
-    python-pip
+    python-pip \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 
 RUN pip install --upgrade pip
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -46,6 +48,6 @@ ADD ./docker/gzip_max.conf /etc/nginx/conf.d/gzip_max.conf
 WORKDIR /tmp
 ADD ./Gemfile Gemfile
 ADD ./Gemfile.lock Gemfile.lock
-ADD ./public/OpenDSA/requirements.txt requirements.txt
 RUN gem install bundler && bundle install --jobs 20 --retry 5
+ADD ./public/OpenDSA/requirements.txt requirements.txt
 RUN pip install -r requirements.txt --upgrade
