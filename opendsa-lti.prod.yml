@@ -15,6 +15,8 @@ services:
       - "3306:3306"
     volumes:
       - "db-data:/var/lib/mysql"
+    networks:
+      - opendsa-lti
 
   app:
     env_file: .env
@@ -24,10 +26,11 @@ services:
       - "443:443"
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
-    # command: bundle exec rake db:rest
-    # command: bundle exec rake db:populate
+    # command: bundle exec rake db:setup
     depends_on:
       - db
+    networks:
+      - opendsa-lti
 
   jobs:
     env_file: .env
@@ -37,3 +40,8 @@ services:
     command: bundle exec rake jobs:work
     depends_on:
       - db
+    networks:
+      - opendsa-lti
+
+networks:
+  opendsa-lti:

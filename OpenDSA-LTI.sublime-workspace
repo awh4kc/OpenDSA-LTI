@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"student",
+				"students_count"
+			],
+			[
+				"mess",
+				"message3"
+			],
+			[
+				"inst",
+				"inst_book"
+			],
+			[
+				"cou",
+				"course_offering_delete_msg"
+			],
+			[
+				"st",
+				"students_count"
+			],
+			[
+				"mes",
+				"message2"
+			],
+			[
+				"boo",
+				"book_title"
+			],
+			[
+				"tra",
+				"trailer"
+			],
+			[
+				"course",
+				"course_offering"
+			],
+			[
+				"stud",
+				"students_count"
+			],
+			[
 				"glo",
 				"global_role_id"
 			],
@@ -14,10 +54,6 @@
 			[
 				"con",
 				"confirmation_sent_at"
-			],
-			[
-				"st",
-				"string"
 			],
 			[
 				"ti",
@@ -31,6 +67,299 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Dockerfile",
+			"settings":
+			{
+				"buffer_size": 1713,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "OpenDSA-LTI:\n  Dockeraize OpenDSA-LTI:\n    ☐ how to create docker environment for development?\n    ☐ how to make OpenDSA-LTI faster in development\n    ☐ how to manage the database changes in docker?\n    ☐ instructions for docker for windows, linux, and mac\n    ☐ instructions for creating and maintaining docker images for production deployment\n    ☐ instructions for cloud deployment (AWS)\n    ☐ database backups in the cloud\n    ☐ using kibana for log analysis\n    ☐ how to deploy OpenDSA on docker swarm locally and on the cloud.\n    ☐ background jobs howto with docker?\n    ☐ production deployment with Capistrano with docker?\n    ☐ Dash-boarding for app deployment.\n    ☐ OpenDSA as a fixed assets? in a different container?\n    ☐ how to maintain backward compatibility with docker images?\n    ☐ define secrets for procudtion deployment.\n    ✔ How to use MySQL db @done (18-01-25 09:37)\n    ✔ how to share database files in host file system? @done (18-01-25 09:37)\n\n  ☐ High @high\n    ☐ save the passphrase\n    ☐ add column for grade posting status\n    ✔ Accept access token from create course offering view @done (17-08-06 14:53)\n    ☐ Add email address to Access Token admin view\n    ✔ separate the instruction. @done (17-07-22 10:48)\n    ✔ dynamically put the access token desc. @done (17-08-06 16:07)\n    ☐ document the exs only book stuff.\n    ☐ Fix the plain books links in the devstack .\n    ☐ Remove new course offering from course offering admin view\n    ☐ how do you know the background jobs have stopped? and how to restart them without triggering the deployment script?\n    ☐ write operation documentation\n      ☐  how to create SSL certifiacte\n      ☐  remove passcode from your certificate\n      ☐ how to trace down when grade posts are rejected by Canvas\n\n  ☐ Book Configuration\n    ☐ Impelement totals\n  ☐ TODAY\n    ☐ Review the enrollment is happening correctly from LTI launch message\n    ✔ let admins to have access to course url @done (16-12-27 16:13)\n    ☐ see if we can delete/add a menu item in canvas left menu\n    ✔ check CS240 course file @done (16-12-27 16:13)\n    ☐ Update the new course offering view to always show access token field an check whether it is valid or not.\n  ☐ General bugs and enhancements\n    ☐ sometimes KA program tracing exercies are not configured in canvas correctly, for ex. RecTraceSummFwdFlow shows in canvas with correct launch url but without any parameters!!\n    ☐ students got stuck in RecTraceSummFwdFlow summary exercise\n    ☐ update devstack to use Apache web server, http://robmclarty.com/blog/how-to-setup-a-production-server-for-rails-4\n    ☐ Fix exercises counter to read from attempts table\n    ☐ Fix OpenDSAx certificate\n    ☐ add OpenSA to https://www.eduappcenter.com/ :)\n    ☐ Add deploy to heroku option\n    ☐ enroll instructors as user with instructors global role and instructors for course role.\n    ☐ remove bower form the Gemfile\n    ☐ check WARNING: Use strings for Figaro configuration. 587 was converted to \"587\".\n    ☐ It was noticed that course slug contains garbage, possible discussion can be found here http://stackoverflow.com/questions/22957144/sanitizing-unicode-strings-for-url-slugs-ruby-rails\n    ☐ * When I did \"re-generate\" the course, the new modules appeared in the module list as \"unpublished\". I had to manually turn them on. That is a nuisance!\n    ☐ Add text area to show progress messages to instructors while the book is being created.\n    ☐ View course offering, course, organization, term, and book in one view\n    ☐ How to enroll instrcutor in a opendsa course\n    ☐ look at the CSS for the new course offering form\n    ☐ enroll user as instructor if he is enrolled in canvas as instructor.\n    ☐ execption handling when instructors delete any of the canvas course items like module, module item, section, or assignments\n    ☐ implement archive option\n    ☐ remove group_exercises from odsa_config.py\n    ☐ BinaryTreeMistakesCON is not showing in binary tree module\n    ☐ review the Books folder structure, while it is not common to have the same organization/course/term/label but technically it is possible\n    ☐ update the instructions to use env vars instead of ignored secret and database files\n    ☐ upgrade to Ubuntu 16.04\n    ✔ In static books fix \"getJSON() error: data is undefined\" @done (16-08-04 12:26)\n    ✔ review deployment script for staging and production @done (16-08-04 12:26)\n    ☐ When updated canvas course don't change modules order\n    ☐ Skip is module does not exists\n    ☐ in OpenDSA-LTI instruction mention to change the admin user password\n    ☐ add organization to code-workout lti launch paramters\n    ☐ In CS3114 VT canvas course, 7.7.7 is blank page\n    ☐ update landing page for everything book\n    ☐ check how late score handled in canvas\n    ☐ compile book progress bar advancement is not correct\n    ☐ remove Hadson book configuration and integrate the new one.\n    ☐ check mark does not appear for some AV/PRO ex. heapremovePRO\n    ☐ Add archive flag to course offering and to instance books.\n    ☐ Add canvas course URL to instructor view.\n    ☐ Delete all canvas course items.\n    ☐ Instructors can change their roles to admins!!!\n    ☐ diagrams are not showing in sections ex. CS2/llistRepCON\n    ☐ Add report a bug link to book sections\n    ☐ remove jos:work from devstack readme.md\n    ☐ Archive old course offerings\n    ☐ don't send odsa_exercise_progresses request for non-gradable sections\n    ☐ review whether position field is save correctly\n    ☐ add section completed check mark on the section when student answered the gradable exercise correctly\n    ☐ Check third party cookies enabled script\n    ☐ Add validation step before course generation and book compilation\n    ☐ partially show access token for security reasons\n    ☐ clean up all repositories\n    ☐ Why it is taking tool long to compile a book?!!!\n    ☐ \"Recompile Book\" button label will be assigned to the first book in the course offerings list.\n    ☐ AVs don't show proficiency indecator immediately\n    ✔ earned_proficiency and points earned logic to be revised @done (16-07-27 14:06)\n    ☐ Add breadcrub to sections in canvas\n    ☐ Write deployment  automation script for DigitalOcean, Heroku, and AWS\n    ☐ User should be able to change his password\n    ☐ Fix user registration with google and facebook and VT CAS\n    ☐ Develop Book configuration view\n    ☐ Instructors should be able to modify and recompile books regularly.Since the configuarion view is not ready, think about a intermediate solution\n    ☐ Problem: Do students need to login into the app?\n    ☐ Instructor dashboard and visualization\n    ☐ Does PE sent incorrect attempts to the server?\n    ✔ steps_fixed and score are not recorded in student attempts in server database @done (16-08-01 13:05)\n    ☐ slide shows timetaken logic needs to be revised\n    ☐ review unnecessary saves in models\n    ☐ Create required tables to hold PE configuration.\n    ☐ remove hardcoded '/vagrant' path from compilation process script\n  ☐ Deployment related tasks\n    ☐ install phpmyadmin on the staging and production server\n  ☐ Develop OpenDSA APIs\n    ☐ user_interactions (some considerations)\n      ☐ prepare template qureies for the table\n      ☐ action_time? how to syncronize server time?\n      ☐ autorize user before saving interactions\n  ☐ exercise_attempts\n      ✔ what is non_summative in exercise attempt? @done (16-08-01 13:22)\n      ✔ when student answers a question incorectly and then take a hint, the hint object is not sent to the server! @done (16-08-01 13:24)\n  ☐ Change client framework accordingly\n    ☐ slide show should not send any scores to the server if it isn't the gradable exercise\n    ☐ remove local mode option\n    ☐ remove programing exercises related code from KA\n  ☐ Consider adding apache to devstack\n  ☐ Book configuration Interface\n    ☐ export the records IDs, how that will affect the compilation process\n    ☐ save the records Ids and send it back\n    ☐ prepare end point to recieve the json object and update the database\n    ☐ decide what to change with existing modules/sections\n    ☐ what if the module/section is deleted form canvas side?\n    ☐ review show/hide sections\n  ☐ check Javascript console.log causes error: “Synchronous XMLHttpRequest on the main thread is deprecated…”\n\nOpenDSA:\n  ☐ Configuration files contains some options that can be fixed in the compilation script?\n  ☐ check why plain books have login\n  ☐ remove unnecessary markup in plan books (like the old login dialog)",
+			"file": "/var/folders/_t/7pygb03n6t7_w_xr698m36840000gn/T/tasks.todo",
+			"file_size": 8789,
+			"file_write_time": 131613647032523739,
+			"settings":
+			{
+				"buffer_size": 8511,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "tasks.todo",
+				"scratch": true
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Configuring OpenDSA, using config/CS3.json\n\nValidating config/CS3.json\n\nWriting files to /home/app/webapp/public/OpenDSA/Books/CS3/\n\nGenerating index.rst\n\nProcessing...\nPreface\n  Intro\nIntroduction\n  IntroDSA\n    Removing section: Some Software Engineering Topics\n  ADT\nProgramming Tutorials\n  cmdline\n  parameters\n  eclipseparameters\n  webcattools\n  debugmethods\n  debug\n  scanning\n  randomaccessfile\n  junitstart\n  junitbasic\n  junitcoverage\nMathematical Background\n  MathpreIntro\n  SetDef\n  MiscMath\n  Logarithms\n  Summations\n  RecurrenceIntro\n  Proofs\n  Estimation\n  MathpreSumm\nAlgorithm Analysis\n  AnalChap\n  AnalPrelim\n  AnalIntro\n  AnalCases\n  AnalCompvsAlg\n  AnalAsymptotic\n  AnalLower\n  AnalProgram\n  AnalProblem\n  AnalMisunderstanding\n  AnalMultiple\n  AnalSpace\n  AnalTuning\n  AlgAnalSummCS3\nLinear Structures\n  ListIntro\n  ListADT\n  ListArray\n  ListLinked\n  ListAnalysis\n  ListDouble\n  ListElement\n  StackArray\n  StackLinked\n  Freelist\n  StackRecur\n  Queue\n  QueueLinked\n  ListSumm\nDesign\n  DesignPatterns\n  DesignAltList\n  Comparison\n  Dictionary\nBinary Trees\n  BinaryTreeIntro\n  BinaryTree\n  RecursiveDS\n  BinaryTreeFullThm\n  BinaryTreeTraversal\n  WritingTraversals\n  BinaryTreeInfFlw\n  BinaryTreeImpl\n  Composite\n  BinaryTreeNodeSpace\n  BST\n  BSTDict\n  BinaryTreeGuidedInfFlw\n  MultipleBinaryTrees\n  BSTCheck\n  CompleteTree\n  Heaps\n  Huffman\n  TreeTrie\n  HuffProof\n  BinaryChapSumm\nSorting\n  InSort\n  SortNotation\n  InsertionSort\n  BubbleSort\n  SelectionSort\n  ExchangeSort\n  SortOpt\n  Shellsort\n  Mergesort\n  MergesortImpl\n  Quicksort\n  Heapsort\n  BinSort\n  RadixSort\n  SortingEmpirical\n  SortingLowerBound\n  SortSumm\nFile Processing\n  FileProc\n  Secondary\n  Diskdrive\n  BuffPool\n  FileProg\n  ExternalSort\nHashing\n  HashIntro\n  HashFunc\n  HashFuncExamp\n  OpenHash\n  BucketHash\n  HashCSimple\n  HashCImproved\n  HashAnal\n  HashDel\n  HashSumm\nMemory Management\n  MemmanIntro\n  Dynamic\n  SequentialFit\n  FirstFit\n  CircularFit\n  BestFit\n  WorstFit\n  MMPerformance\n  Buddy\n  Garbage\nIndexing\n  IndexIntro\n  LinearIndexing\n  ISAM\n  TreeIndexing\n  TwoThreeTree\n  BTree\n  IndexingSumm\nGeneral Trees\n  GenTreeIntro\n  UnionFind\n  SequentialRep\nGraphs\n  GraphIntro\n  GraphImpl\n  GraphTraversal\n  GraphTopsort\n  GraphShortest\n  MCST\n  Kruskal\n  Floyd\nAdvanced Data Structures\n  SkipList\n  Spatial\n  PRquadtree\n  KDtree\n  Bintree\n  OtherSpatial\nAppendix\n  Glossary\n  Bibliography\n\nBuilding textbook...\nmake[1]: Entering directory '/home/app/webapp/public/OpenDSA/Books/CS3'\nsphinx-build  -b html source html/\nMaking output directory...\nRunning Sphinx v1.2\nloading translations [en]... done\nloading pickled environment... not yet created\nbuilding [html]: targets for 146 source files that are out of date\nupdating environment: 146 added, 0 changed, 0 removed\nreading sources... [  0%] ADT\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  1%] AlgAnalSummCS3\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  2%] AnalAsymptotic\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  2%] AnalCases\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  3%] AnalChap\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  4%] AnalCompvsAlg\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  4%] AnalIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  5%] AnalLower\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  6%] AnalMisunderstanding\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  6%] AnalMultiple\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  7%] AnalPrelim\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  8%] AnalProblem\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  8%] AnalProgram\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [  9%] AnalSpace\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 10%] AnalTuning\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 10%] BST\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 11%] BSTCheck\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 12%] BSTDict\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 13%] BTree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 13%] BestFit\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 14%] Bibliography\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 15%] BinSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 15%] BinaryChapSumm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 16%] BinaryTree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 17%] BinaryTreeFullThm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 17%] BinaryTreeGuidedInfFlw\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 18%] BinaryTreeImpl\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 19%] BinaryTreeInfFlw\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 19%] BinaryTreeIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 20%] BinaryTreeNodeSpace\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 21%] BinaryTreeTraversal\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 21%] Bintree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 22%] BubbleSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 23%] BucketHash\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 23%] Buddy\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 24%] BuffPool\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 25%] CircularFit\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 26%] Comparison\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 26%] CompleteTree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 27%] Composite\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 28%] DesignAltList\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 28%] DesignPatterns\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 29%] Dictionary\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 30%] Diskdrive\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 30%] Dynamic\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 31%] Estimation\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 32%] ExchangeSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 32%] ExternalSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 33%] FileProc\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 34%] FileProg\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 34%] FirstFit\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 35%] Floyd\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 36%] Freelist\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 36%] Garbage\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 37%] GenTreeIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 38%] Glossary\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 39%] GraphImpl\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 39%] GraphIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 40%] GraphShortest\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 41%] GraphTopsort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 41%] GraphTraversal\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 42%] HashAnal\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 43%] HashCImproved\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 43%] HashCSimple\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 44%] HashDel\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 45%] HashFunc\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 45%] HashFuncExamp\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 46%] HashIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 47%] HashSumm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 47%] Heaps\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 48%] Heapsort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 49%] HuffProof\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 50%] Huffman\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 50%] ISAM\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 51%] InSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 52%] IndexIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 52%] IndexingSumm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 53%] InsertionSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 54%] Intro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 54%] IntroDSA\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 55%] KDtree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 56%] Kruskal\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 56%] LinearIndexing\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 57%] ListADT\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 58%] ListAnalysis\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 58%] ListArray\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 59%] ListDouble\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 60%] ListElement\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 60%] ListIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 61%] ListLinked\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 62%] ListSumm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 63%] Logarithms\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 63%] MCST\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 64%] MMPerformance\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 65%] MathpreIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 65%] MathpreSumm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 66%] MemmanIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 67%] Mergesort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 67%] MergesortImpl\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 68%] MiscMath\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 69%] MultipleBinaryTrees\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 69%] OpenHash\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 70%] OtherSpatial\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 71%] PRquadtree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 71%] Proofs\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 72%] Queue\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 73%] QueueLinked\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 73%] Quicksort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 74%] RadixSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 75%] RecurrenceIntro\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 76%] RecursiveDS\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 76%] Secondary\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 77%] SelectionSort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 78%] SequentialFit\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 78%] SequentialRep\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 79%] SetDef\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 80%] Shellsort\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 80%] SkipList\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 81%] SortNotation\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 82%] SortOpt\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 82%] SortSumm\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 83%] SortingEmpirical\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 84%] SortingLowerBound\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 84%] Spatial\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 85%] StackArray\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 86%] StackLinked\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 86%] StackRecur\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 87%] Summations\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 88%] TreeIndexing\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 89%] TreeTrie\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 89%] TwoThreeTree\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 90%] UnionFind\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 91%] WorstFit\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 91%] WritingTraversals\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 92%] cmdline\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 93%] debug\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 93%] debugmethods\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 94%] eclipseparameters\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 95%] index\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 95%] junitbasic\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 96%] junitcoverage\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 97%] junitstart\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 97%] parameters\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 98%] randomaccessfile\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [ 99%] scanning\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.reading sources... [100%] webcattools\ndeprecation warning: io.FileInput() argument `handle_io_errors` is ignored since \"Docutils 0.10 (2012-12-16)\" and will soon be removed.\nlooking for now-outdated files... none found\npickling environment... done\nchecking consistency... done\npreparing documents... done\nwriting output... [  0%] ADT\nwriting output... [  1%] AlgAnalSummCS3\nwriting output... [  2%] AnalAsymptotic\nwriting output... [  2%] AnalCases\nwriting output... [  3%] AnalChap\nwriting output... [  4%] AnalCompvsAlg\nwriting output... [  4%] AnalIntro\nwriting output... [  5%] AnalLower\nwriting output... [  6%] AnalMisunderstanding\nwriting output... [  6%] AnalMultiple\nwriting output... [  7%] AnalPrelim\nwriting output... [  8%] AnalProblem\nwriting output... [  8%] AnalProgram\nwriting output... [  9%] AnalSpace\nwriting output... [ 10%] AnalTuning\nwriting output... [ 10%] BST\nwriting output... [ 11%] BSTCheck\nWARNING: Missing object reference BSTCheckFig\nwriting output... [ 12%] BSTDict\nwriting output... [ 13%] BTree\nwriting output... [ 13%] BestFit\nwriting output... [ 14%] Bibliography\nwriting output... [ 15%] BinSort\nwriting output... [ 15%] BinaryChapSumm\nwriting output... [ 16%] BinaryTree\nwriting output... [ 17%] BinaryTreeFullThm\nwriting output... [ 17%] BinaryTreeGuidedInfFlw\nwriting output... [ 18%] BinaryTreeImpl\nwriting output... [ 19%] BinaryTreeInfFlw\nwriting output... [ 19%] BinaryTreeIntro\nwriting output... [ 20%] BinaryTreeNodeSpace\nwriting output... [ 21%] BinaryTreeTraversal\nwriting output... [ 21%] Bintree\nwriting output... [ 22%] BubbleSort\nwriting output... [ 23%] BucketHash\nwriting output... [ 23%] Buddy\nwriting output... [ 24%] BuffPool\nwriting output... [ 25%] CircularFit\nwriting output... [ 26%] Comparison\nwriting output... [ 26%] CompleteTree\nwriting output... [ 27%] Composite\nwriting output... [ 28%] DesignAltList\nwriting output... [ 28%] DesignPatterns\nwriting output... [ 29%] Dictionary\nwriting output... [ 30%] Diskdrive\nwriting output... [ 30%] Dynamic\nwriting output... [ 31%] Estimation\nwriting output... [ 32%] ExchangeSort\nwriting output... [ 32%] ExternalSort\nwriting output... [ 33%] FileProc\nwriting output... [ 34%] FileProg\nwriting output... [ 34%] FirstFit\nwriting output... [ 35%] Floyd\nwriting output... [ 36%] Freelist\nwriting output... [ 36%] Garbage\nwriting output... [ 37%] GenTreeIntro\nwriting output... [ 38%] Glossary\nwriting output... [ 39%] GraphImpl\nwriting output... [ 39%] GraphIntro\nwriting output... [ 40%] GraphShortest\nwriting output... [ 41%] GraphTopsort\nwriting output... [ 41%] GraphTraversal\nwriting output... [ 42%] HashAnal\nwriting output... [ 43%] HashCImproved\nwriting output... [ 43%] HashCSimple\nwriting output... [ 44%] HashDel\nwriting output... [ 45%] HashFunc\nwriting output... [ 45%] HashFuncExamp\nwriting output... [ 46%] HashIntro\nwriting output... [ 47%] HashSumm\nwriting output... [ 47%] Heaps\nwriting output... [ 48%] Heapsort\nwriting output... [ 49%] HuffProof\nwriting output... [ 50%] Huffman\nwriting output... [ 50%] ISAM\nwriting output... [ 51%] InSort\nwriting output... [ 52%] IndexIntro\nwriting output... [ 52%] IndexingSumm\nwriting output... [ 53%] InsertionSort\nwriting output... [ 54%] Intro\nwriting output... [ 54%] IntroDSA\nwriting output... [ 55%] KDtree\nwriting output... [ 56%] Kruskal\nwriting output... [ 56%] LinearIndexing\nwriting output... [ 57%] ListADT\nwriting output... [ 58%] ListAnalysis\nwriting output... [ 58%] ListArray\nwriting output... [ 59%] ListDouble\nwriting output... [ 60%] ListElement\nwriting output... [ 60%] ListIntro\nwriting output... [ 61%] ListLinked\nwriting output... [ 62%] ListSumm\nwriting output... [ 63%] Logarithms\nwriting output... [ 63%] MCST\nwriting output... [ 64%] MMPerformance\nwriting output... [ 65%] MathpreIntro\nwriting output... [ 65%] MathpreSumm\nwriting output... [ 66%] MemmanIntro\nwriting output... [ 67%] Mergesort\nwriting output... [ 67%] MergesortImpl\nwriting output... [ 68%] MiscMath\nwriting output... [ 69%] MultipleBinaryTrees\nwriting output... [ 69%] OpenHash\nwriting output... [ 70%] OtherSpatial\nwriting output... [ 71%] PRquadtree\nwriting output... [ 71%] Proofs\nwriting output... [ 72%] Queue\nwriting output... [ 73%] QueueLinked\nwriting output... [ 73%] Quicksort\nwriting output... [ 74%] RadixSort\nwriting output... [ 75%] RecurrenceIntro\nwriting output... [ 76%] RecursiveDS\nwriting output... [ 76%] Secondary\nwriting output... [ 77%] SelectionSort\nwriting output... [ 78%] SequentialFit\nwriting output... [ 78%] SequentialRep\nwriting output... [ 79%] SetDef\nwriting output... [ 80%] Shellsort\nwriting output... [ 80%] SkipList\nwriting output... [ 81%] SortNotation\nwriting output... [ 82%] SortOpt\nwriting output... [ 82%] SortSumm\nwriting output... [ 83%] SortingEmpirical\nwriting output... [ 84%] SortingLowerBound\nwriting output... [ 84%] Spatial\nwriting output... [ 85%] StackArray\nwriting output... [ 86%] StackLinked\nwriting output... [ 86%] StackRecur\nwriting output... [ 87%] Summations\nwriting output... [ 88%] TreeIndexing\nwriting output... [ 89%] TreeTrie\nwriting output... [ 89%] TwoThreeTree\nwriting output... [ 90%] UnionFind\nwriting output... [ 91%] WorstFit\nwriting output... [ 91%] WritingTraversals\nwriting output... [ 92%] cmdline\nwriting output... [ 93%] debug\nwriting output... [ 93%] debugmethods\nwriting output... [ 94%] eclipseparameters\nwriting output... [ 95%] index\nwriting output... [ 95%] junitbasic\nwriting output... [ 96%] junitcoverage\nwriting output... [ 97%] junitstart\nwriting output... [ 97%] parameters\nwriting output... [ 98%] randomaccessfile\nwriting output... [ 99%] scanning\nwriting output... [100%] webcattools\n\nwriting additional files... genindex search\ncopying images... [  1%] Images/DebugConditionalBreakpoint.png\ncopying images... [  3%] Images/hashplot.png\ncopying images... [  4%] Images/BPins.png\ncopying images... [  6%] Images/HeapInd.png\ncopying images... [  7%] Images/BSTShape2.png\ncopying images... [  9%] Images/LISPdang.png\ncopying images... [ 10%] Images/DebugValue1.png\ncopying images... [ 12%] Images/PluginInstall2.png\ncopying images... [ 14%] Images/PtrSwap.png\ncopying images... [ 15%] Images/coverageexample.png\ncopying images... [ 17%] Images/ISAM.png\ncopying images... [ 18%] Images/coverageoverview2.png\ncopying images... [ 20%] Images/DSW.png\ncopying images... [ 21%] Images/parameterexample.png\ncopying images... [ 23%] Images/Plat.png\ncopying images... [ 25%] Images/DebugDisplay1.png\ncopying images... [ 26%] Images/PrimMST.png\ncopying images... [ 28%] Images/DebugConditional.png\ncopying images... [ 29%] Images/LISPex.png\ncopying images... [ 31%] Images/BPsimDel.png\ncopying images... [ 32%] Images/WebCATAssignment.png\ncopying images... [ 34%] Images/HashNormal.png\ncopying images... [ 35%] Images/DebugValue3.png\ncopying images... [ 37%] Images/BinArray.png\ncopying images... [ 39%] Images/BTexamp.png\ncopying images... [ 40%] Images/manexample.png\ncopying images... [ 42%] Images/Floyd.png\ncopying images... [ 43%] Images/DebugMemoryPoolRaw1.png\ncopying images... [ 45%] Images/BPmerge.png\ncopying images... [ 46%] Images/TwoDArr.png\ncopying images... [ 48%] Images/OneLeaf.png\ncopying images... [ 50%] Images/ParametersStep4.png\ncopying images... [ 51%] Images/InstallDetails.png\ncopying images... [ 53%] Images/Inverted.png\ncopying images... [ 54%] Images/PRexamp.png\ncopying images... [ 56%] Images/MemTags.png\ncopying images... [ 57%] Images/MemEx.png\ncopying images... [ 59%] Images/HeapBld.png\ncopying images... [ 60%] Images/KDtree2.png\ncopying images... [ 62%] Images/DebugValue2.png\ncopying images... [ 64%] Images/eclemmabtn.png\ncopying images... [ 65%] Images/DebugList.png\ncopying images... [ 67%] Images/PluginInstall1.png\ncopying images... [ 68%] Images/DebugMemoryPool1.png\ncopying images... [ 70%] Images/InvList.png\ncopying images... [ 71%] Images/RecurSta.png\ncopying images... [ 73%] Images/Debug1.png\ncopying images... [ 75%] Images/ParametersStep1.png\ncopying images... [ 76%] Images/ParametersStep2.png\ncopying images... [ 78%] Images/hexample.png\ncopying images... [ 79%] Images/PtQuad.png\ncopying images... [ 81%] Images/DebugMemoryPoolPreferences.png\ncopying images... [ 82%] Images/BPborrow.png\ncopying images... [ 84%] Images/BSTCheckFig.png\ncopying images... [ 85%] Images/DebugValue4.png\ncopying images... [ 87%] Images/InCirc.png\ncopying images... [ 89%] Images/Handle.png\ncopying images... [ 90%] Images/Disk.png\ncopying images... [ 92%] Images/Webcatnewsoftware.png\ncopying images... [ 93%] Images/coverageoverview1.png\ncopying images... [ 95%] Images/KDtree.png\ncopying images... [ 96%] Images/BPexamp.png\ncopying images... [ 98%] Images/ParametersStep3.png\ncopying images... [100%] Images/MidSquare.png\n\ncopying static files... done\ncopying extra files... dumping search index... done\ndumping object inventory... done\nbuild succeeded.\nrm html/_static/jquery.js html/_static/websupport.js\ncp \"/home/app/webapp/public/OpenDSA/lib/conceptMap.html\" html/\nrm *.json\n\nBuild finished. The HTML pages are in html/.\nrm Makefile\nMinimizing html/_static/underscore.js\n/bin/sh: 1: java: not found\nmake[1]: [min-underscore] Error 127 (ignored)\nMakefile:21: recipe for target 'min-underscore' failed\nMinimizing html/_static/doctools.js\n/bin/sh: 1: java: not found\nmake[1]: [min-doctools] Error 127 (ignored)\nMakefile:25: recipe for target 'min-doctools' failed\nMinimizing html/_static/searchtools.js\n/bin/sh: 1: java: not found\nmake[1]: [min-searchtools] Error 127 (ignored)\nMakefile:29: recipe for target 'min-searchtools' failed\nmake[1]: Leaving directory '/home/app/webapp/public/OpenDSA/Books/CS3'\nroot@b5ad735fd6c7:/home/app/webapp/public/OpenDSA# ",
+			"settings":
+			{
+				"buffer_size": 37364,
+				"line_ending": "Unix",
+				"name": "Configuring OpenDSA, using config/CS3.json"
+			}
+		},
+		{
+			"contents": "canvas.instructure\n7~iYir4J6xo9iMXigxIM9BEqP5zWhJiUyuO8dnP83aEit2doF9Ed0nrO70qceI3Cr2\n7~plkd9A5xSjexweNvrQjz8PpG0cekeShDuCGdPMStYPyl78C3ZwnndqIP9HBzWn4c\ncanvas.vt\n4511~YTyChOwj5HJZz5n1LA3Haq6B5upa2ZtvXgzUFyyLOzjq00ygRjEgLCDBKobMYBdN",
+			"file": "/var/folders/_t/7pygb03n6t7_w_xr698m36840000gn/T/canvas: access_token",
+			"file_size": 232,
+			"file_write_time": 131613019391988084,
+			"settings":
+			{
+				"buffer_size": 232,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "canvas: access_token",
+				"scratch": true
+			}
+		},
+		{
+			"file": "public/OpenDSA/Makefile",
+			"settings":
+			{
+				"buffer_size": 7017,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "bootstrap.sh",
+			"settings":
+			{
+				"buffer_size": 2678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".dockerignore",
+			"settings":
+			{
+				"buffer_size": 64,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "bundles"
+			}
+		},
+		{
+			"file": "config/deploy.rb",
+			"settings":
+			{
+				"buffer_size": 6028,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# https://github.com/phusion/passenger-docker\nFROM phusion/passenger-customizable:0.9.27\n\nENV HOME /root\n\nCMD [\"/sbin/my_init\"]\n\nRUN /pd_build/ruby-2.3.*.sh\nRUN /pd_build/python.sh\nRUN /pd_build/nodejs.sh\n\nRUN apt-get update && \\\n    apt-get upgrade -y -o Dpkg::Options::=\"--force-confold\" && \\\n    apt-get install -y software-properties-common apt-utils locales tzdata \\\n    mysql-client\nRUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\n    apt-get upgrade -y -o Dpkg::Options::=\"--force-confold\" \\\n\nRUN echo \"America/New_York\" > /etc/timezone\nRUN dpkg-reconfigure -f noninteractive tzdata\n\n# Enable Nginx and Passenger\nRUN rm -f /etc/service/nginx/down\n\n# Configure Nginx and Passenger\nRUN rm /etc/nginx/sites-enabled/default\nADD ./docker/webapp.conf /etc/nginx/sites-enabled/webapp.conf\nADD ./docker/secret_key.conf /etc/nginx/main.d/secret_key.conf\nADD ./docker/gzip_max.conf /etc/nginx/conf.d/gzip_max.conf\n\nRUN mkdir /home/app/webapp\nWORKDIR /home/app/webapp\nCOPY . ./\nRUN gem install bundler && bundle install --jobs 20 --retry 5\n",
+			"settings":
+			{
+				"buffer_size": 1055,
+				"line_ending": "Unix",
+				"name": "# https://github.com/phusion/passenger-docker"
+			}
+		},
+		{
+			"file": "docker/secret_key.conf",
+			"settings":
+			{
+				"buffer_size": 59,
+				"line_ending": "Unix",
+				"name": "# /etc/nginx/main.d/secret_key.conf:"
+			}
+		},
+		{
+			"file": "docker/gzip_max.conf",
+			"settings":
+			{
+				"buffer_size": 53,
+				"line_ending": "Unix",
+				"name": "# /etc/nginx/conf.d/gzip_max.conf:"
+			}
+		},
+		{
+			"file": "docker/webapp.conf",
+			"settings":
+			{
+				"buffer_size": 333,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# /etc/nginx/sites-enabled/webapp.conf:"
+			}
+		},
+		{
+			"contents": "# https://github.com/phusion/passenger-docker\nFROM phusion/passenger-customizable:0.9.27\n\nENV HOME /root\n\nCMD [\"/sbin/my_init\"]\n\nRUN /pd_build/ruby-2.3.*.sh\nRUN /pd_build/python.sh\nRUN /pd_build/nodejs.sh\n\nRUN apt-get update && \\\n    apt-get upgrade -y -o Dpkg::Options::=\"--force-confold\" && \\\n    apt-get install -y software-properties-common apt-utils locales tzdata \\\n    mysql-client\nRUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*\n\nRUN echo \"America/New_York\" > /etc/timezone\nRUN dpkg-reconfigure -f noninteractive tzdata\n\n# Enable Nginx and Passenger\nRUN rm -f /etc/service/nginx/down\n\n# Configure Nginx and Passenger\nRUN rm /etc/nginx/sites-enabled/default\nADD ./docker/webapp.conf /etc/nginx/sites-enabled/webapp.conf\nADD ./docker/secret_key.conf /etc/nginx/main.d/secret_key.conf\nADD ./docker/gzip_max.conf /etc/nginx/conf.d/gzip_max.conf\n\n\nRUN mkdir /home/app/webapp\nWORKDIR /home/app/webapp\nCOPY . ./\nRUN gem install bundler && bundle install --jobs 20 --retry 5\n\nRUN chown -R app:app /home/app/webapp/\nRUN chmod -R 775 /home/app/webapp/\n\nUSER app\n# expose the port\nEXPOSE 3000",
+			"file": "Dockerfile_old",
+			"file_size": 1108,
+			"file_write_time": 131611311065887971,
+			"settings":
+			{
+				"buffer_size": 1108,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "runservers.sh",
+			"settings":
+			{
+				"buffer_size": 89,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/admin/course_offering.rb",
+			"settings":
+			{
+				"buffer_size": 4009,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/helpers/active_admin/resources_helper.rb",
+			"settings":
+			{
+				"buffer_size": 1338,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/course_offering.rb",
+			"settings":
+			{
+				"buffer_size": 5841,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 1187,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 3553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docker-compose.yml",
+			"settings":
+			{
+				"buffer_size": 593,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "log/development.log",
+			"settings":
+			{
+				"buffer_size": 2668614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".env",
+			"settings":
+			{
+				"buffer_size": 258,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 17333,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/course_offerings/_form.html.haml",
+			"settings":
+			{
+				"buffer_size": 10034,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 1546 files for \"RAILS_ENV\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/.env:\n    7  \n    8  RACK_ENV=development\n    9: RAILS_ENV: development\n   10  SECRET_KEY_BASE=development_secret\n   11  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Configuration:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/README.md:\n  364  \n  365            passenger_enabled on;\n  366:           rails_env    production;\n  367            root         /home/deploy/OpenDSA-LTI/current/public;\n  368  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/RST:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/deploy.rb:\n  123  #     on roles(:all) do\n  124  #       within release_path do\n  125: #         with rails_env: fetch(:rails_env) do\n  126  #           execute :rake, 'db:delete_templates'\n  127  #         end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/puma.rb:\n    6  \n    7  # Default to production\n    8: rails_env = ENV['RAILS_ENV'] || \"production\"\n    9: environment rails_env\n   10  \n   11  # Set up socket location\n   ..\n   26    ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished\n   27    ActiveRecord::Base.establish_connection(\n   28:     YAML.load_file(\"#{app_dir}/config/database.yml\")[rails_env])\n   29  end\n   30  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/schedule.rb:\n   23  set :output, \"/home/deploy/OpenDSA-LTI/current/log/cron_log.log\"\n   24  every :reboot do\n   25:   command \"cd /home/deploy/OpenDSA-LTI/current && RAILS_ENV=production bin/delayed_job -n 2 start\"\n   26  end\n   27  \n   28  every 1.day, :at => '5:00 am' do\n   29:  command \"cd /home/deploy/OpenDSA-LTI/current && RAILS_ENV=production bin/delayed_job  -n 2 restart\"\n   30  end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/log/development.log:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/spec/spec_helper.rb:\n    1  # This file is copied to spec/ when you run 'rails generate rspec:install'\n    2: ENV['RAILS_ENV'] ||= 'test'\n    3  require File.expand_path('../../config/environment', __FILE__)\n    4  require 'rspec/rails'\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/test/test_helper.rb:\n    1: ENV[\"RAILS_ENV\"] ||= \"test\"\n    2  require File.expand_path('../../config/environment', __FILE__)\n    3  require 'rails/test_help'\n\n13 matches across 8 files\n\n\nSearching 2011 files for \"Configuration\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/.gitignore:\n   38  #server.key\n   39  /RST\n   40: /Configuration\n   41  \n   42  # cache files for sublime text\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/bootstrap.sh:\n   61  ./configure && make && sudo make install\n   62  \n   63: hh --show-configuration >> ~/.bashrc\n   64  source ~/.bashrc\n   65  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Configuration:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/README.md:\n  127  \n  128    - Open up the server's IP address in your browser to make sure that nginx is up and running. The service command also provides some other methods such as `restart` and `stop` that allow you to easily restart and stop your webserver.\n  129:   - Next, we need to update the Nginx configuration file and update a couple of things. You'll want to open up `/etc/nginx/nginx.conf` in your favorite editor or simply use nano:\n  130    ```\n  131    $ sudo nano /etc/nginx/nginx.conf\n  ...\n  143    ...\n  144    ```\n  145:   - Second, point Passenger to the version of Ruby that we're using. Find the following lines in the configuration file\n  146    ```\n  147    ##\n  ...\n  156    passenger_ruby /home/deploy/.rbenv/shims/ruby;\n  157    ```\n  158:   - The `passenger_ruby` is the important line here. Once you've changed `passenger_ruby` to use the right version Ruby, you can restart Nginx with the new Passenger configuration.\n  159    ```\n  160    $ sudo service nginx start\n  ...\n  350  \n  351    - **Switch to the production server terminal**\n  352:   - Adding The Nginx Host. In order to get Nginx to respond with the Rails application, we need to modify it's sites-enabled. Open up `/etc/nginx/sites-enabled/default` in your text editor and we will replace the file's contents with the below configuration. Replace `prod_server_name` with your domain name.\n  353  \n  354    ```\n  ...\n  407      + alter table users drop index email;\n  408      + alter table users drop index slug;\n  409: - Change the following configuration on workbench\n  410      + Edit > Preferences > Sql Editor > uncheck the \"Safe Updates\"\n  411  - Execute the following update statements to anonymize the exported data\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/RST:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/admin/inst_book.rb:\n    8    permit_params :template, :title, :desc, :course_offering_id, :user_id, :book_type\n    9  \n   10:   member_action :update_configuration, method: :get do\n   11    end\n   12  \n   ..\n   49      end\n   50  \n   51:     def update_configuration\n   52:       if !authorized? :update_configuration\n   53          redirect_to admin_inst_books_path\n   54        end\n   ..\n   77        end\n   78  \n   79:       redirect_to admin_inst_books_path, notice: 'Book configuration uploaded successfully!'\n   80      end\n   81  \n   ..\n   93        title = inst_book.title\n   94        inst_book.destroy\n   95:       redirect_to admin_inst_books_path, notice: \"Book configuration '#{title}' was deleted successfully!\"\n   96      end\n   97  \n   ..\n  127        end\n  128        links += link_to \"Clone\", clone_admin_inst_book_path(inst_book)\n  129:       if authorized? :update_configuration, inst_book\n  130:         links += link_to \"Update Configuration\", update_configuration_admin_inst_book_path(inst_book)\n  131          links += ' '\n  132        end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/assets/javascripts/book_config.js:\n    1: /* OpenDSA Book Configuration Interface */\n    2  \n    3  // allows us to customize node apperances when they are rendered\n    .\n   62    var changesMade = false;\n   63  \n   64:   // indicates if we are in the processing of loading an existing configuration\n   65    var loadingConfig = false;\n   66    \n   67:   /* whether any changes have been made to the configuration */\n   68    var dirty = false;\n   69  \n   70:   /* id of the loaded configuration, or null */\n   71    var bookId = null;\n   72  \n   ..\n  341            hideLoadingOverlay();\n  342            if (update) {\n  343:             alert('Your book configuration was updated successfully.');\n  344            }\n  345            else {\n  346:             alert('Your book configuration was saved successfully.');\n  347            }\n  348          },\n  ...\n  350            hideLoadingOverlay();\n  351            if (txtStatus && errorThrown) {\n  352:             alert('Error saving configuration: ' + textStatus + ' ' + errorThrown);\n  353            }\n  354            else {\n  355:             alert('An error occured while saving the configuration');\n  356            }\n  357          },\n  ...\n  387      }\n  388  \n  389:     // load a configuration from the file a user has chosen\n  390:     $('#config-file-load').on('click', loadFileConfiguration);\n  391  \n  392:     // load a configuration from a reference configuration stored on the\n  393      // OpenDSA server\n  394:     $('#reference-config-load').on('click', loadReferenceConfiguration);\n  395  \n  396:     // load one of the user's configurations from the OpenDSA database\n  397:     $('#user-config-load').on('click', loadUserConfiguration);\n  398    });\n  399  \n  ...\n  872    }\n  873  \n  874:   /* Loads the settings from the specified configuration */\n  875:   function loadConfiguration(config) {\n  876      $('#book-config-form')[0].reset();\n  877      for (var key in config) {\n  ...\n  931    }\n  932  \n  933:   /* Loads a 'full' configuration file that includes the settings for \n  934       all exercises, and no global exercise settings */\n  935:   function loadFullConfiguration(config) {\n  936      initializeJsTree(ODSA.availableModules[config.lang].children, {}, function() {\n  937        $('#book-config-form')[0].reset();\n  ...\n 1163    }\n 1164  \n 1165:   function loadFileConfiguration() {\n 1166      if (!confirmLoad()) return;\n 1167      clearBookId();\n ....\n 1174      reader.onload = (function(event) {\n 1175        var config = JSON.parse(event.target.result);\n 1176:       loadConfiguration(config);\n 1177        $('#config-file-load').removeAttr('disabled');\n 1178        $('#reference-config-load').removeAttr('disabled');\n ....\n 1182    }\n 1183  \n 1184:   function loadReferenceConfiguration() {\n 1185      if (!confirmLoad()) return;\n 1186      clearBookId();\n ....\n 1193        url: url,\n 1194        success: function(data, txtStatus, xhr) {\n 1195:         loadConfiguration(data);\n 1196        },\n 1197        error: function(xhr, txtStatus, errorThrown) {\n 1198:         alert('Error loading configuration: ' + textStatus + ' ' + errorThrown);\n 1199        },\n 1200        complete: function(xhr, textStatus) {\n ....\n 1208    }\n 1209  \n 1210:   /* Retrieves a configuration from the OpenDSA database */\n 1211:   function loadUserConfiguration() {\n 1212      if (!confirmLoad()) return;\n 1213      loadingConfig = true;\n ....\n 1217      $('#user-config-load').attr('disabled', true);\n 1218      setBookId($('#user-config').val());\n 1219:     var url = '/inst_books/configurations/' + bookId;\n 1220      $.ajax({\n 1221        url: url,\n 1222        success: function(data, txtStatus, xhr) {\n 1223:         loadFullConfiguration(data);\n 1224        },\n 1225        error: function(xhr, txtStatus, errorThrown) {\n 1226:         alert('Error loading configuration: ' + textStatus + ' ' + errorThrown);\n 1227        },\n 1228        complete: function(xhr, textStatus) {\n ....\n 1657          var missingModules = [];\n 1658          if (chapters) {\n 1659:           // we are loading an existing configuration\n 1660            for (var chapter in chapters) {\n 1661              var modules = chapters[chapter];\n ....\n 1696            }\n 1697            if (missingModules.length > 0) {\n 1698:             var msg = 'WARNING - the following modules were listed in the configuration but do not exist on the OpenDSA server:\\n';\n 1699              for (var i = 0; i < missingModules.length; i++) {\n 1700                msg += '\\n\\t- ' + missingModules[i];\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/assets/javascripts/inst_books.js:\n  645  \n  646    /*\n  647:    * Function to send configuration to server.\n  648     */\n  649    var handleSubmit = function() {\n  ...\n  709  \n  710    /*\n  711:    * Function to validate user configuration before\n  712     * sending book to server.\n  713     */\n  ...\n  716      messages = [];\n  717      if($('#book-title').val() === '') {\n  718:       messages.push('The book configuration needs a title.');\n  719      }\n  720      if($('#book-desc').val() === '') {\n  721:       messages.push('The book configuration needs a description.');\n  722      }\n  723      $('.points').each(function(index, element) {\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/assets/stylesheets/book.scss:\n    1: // Place all the styles related to the Configurations controller here.\n    2  // They will automatically be included in application.css.\n    3  // You can use Sass (SCSS) here: http://sass-lang.com/\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/assets/templates/load-config-modal.html:\n    9              <div class=\"modal-body\">\n   10                  <!-- Add content here! -->\n   11:                 <select-input ng-model=\"loadConfigCtrl.selection\" label=\"Configuration\" input=\"config\" options=\"loadConfigCtrl.options\"></select-input>\n   12              </div>\n   13              <div class=\"modal-footer\">\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/assets/templates/new-book.html:\n   23              <!-- Set up the new book controller for use within this form element -->\n   24              <form method=\"post\" ng-controller=\"NewBookController as newBookCtrl\">\n   25:                 <text-input ng-model=\"newBookCtrl.name\" label=\"Configuration Name\" input=\"name\" placeholder=\"Configuration Name\"></text-input>\n   26                  <text-input ng-model=\"newBookCtrl.bookConfig.title\" label=\"title\" input=\"title\" placeholder=\"Title\"></text-input>\n   27                  <text-input ng-model=\"newBookCtrl.bookConfig.module_origin\" label=\"Module Origin\" input=\"title\" placeholder=\"example: http://algoviz.org\"></text-input>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/controllers/inst_books_controller.rb:\n   44  \n   45      respond_to do |format|\n   46:       msg = { :status => \"success\", :message => \"Book configuration uploaded successfully!\" }\n   47        format.json  { render :json => msg }\n   48      end\n   ..\n   50    end\n   51  \n   52:   def configuration\n   53      @inst_book = InstBook.find_by(id: params[:id])\n   54      render :json => @inst_book.to_builder.target!\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/controllers/configurations/book_controller.rb:\n  187  \n  188  # The actual rails controller\n  189: class Configurations::BookController < ApplicationController\n  190  \n  191      def show\n  ...\n  271  \n  272          @learning_tools = LearningTool.all.select(\"id, name\")\n  273:         @reference_configs = reference_book_configurations()\n  274          @book_metadata = InstBook.get_metadata(current_user.id)\n  275          \n  ...\n  279      private\n  280  \n  281:     # Gets a list of book configurations hosted on the OpenDSA server\n  282      # Returns a dictionary containing the name, title, and url of each config file\n  283:     def reference_book_configurations()\n  284          return Rails.cache.fetch(\"odsa_reference_book_configs\", expires_in: 6.hours) do\n  285              config_dir = File.join(\"public\", \"OpenDSA\", \"config\")\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/jobs/generate_course_job.rb:\n   62      save_lti_app(client, lms_course_id, tool_data)\n   63  \n   64:     # generate canvas course modules, items and assignments out of inst_book configurations\n   65      save_lms_course(client, lms_course_id)\n   66      @inst_book.last_compiled = Time.now\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/ability.rb:\n   54    def process_global_role(user)\n   55      # Grant management access to most things through the\n   56:     # GlobalRole.can_edit_system_configuration? permission.\n   57      #\n   58      # TODO: This permission does too much. We probably want to separate\n   59:     # out things like ActivityLog, SystemConfiguration, User, and the roles\n   60      # from Organization, for example.\n   61:     if user.global_role.can_edit_system_configuration?\n   62        can :manage, [\n   63          CourseRole,\n   ..\n  107        can :manage, CourseEnrollment, user_id: user.id\n  108        # Everyone can upload and compile his book\n  109:       can [:compile, :configure, :configuration], InstBook\n  110      end\n  111  \n  ...\n  119    #\n  120    def process_courses(user)\n  121:     if !user.global_role.can_edit_system_configuration? &&\n  122        !user.global_role.can_manage_all_courses?\n  123  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/global_role.rb:\n    6  #  name                          :string(255)      default(\"\"), not null\n    7  #  can_manage_all_courses        :boolean          default(FALSE), not null\n    8: #  can_edit_system_configuration :boolean          default(FALSE), not null\n    9  #  builtin                       :boolean          default(FALSE), not null\n   10  #\n   ..\n   21  \n   22    with_options if: :builtin?, on: :update, changeable: false do |builtin|\n   23:     builtin.validates :can_edit_system_configuration\n   24      builtin.validates :can_manage_all_courses\n   25    end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/inst_book.rb:\n  159  \n  160    # --------------------------------------------------------------------------\n  161:   # clone book configuration\n  162    def clone(current_user)\n  163        b = InstBook.new\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/user.rb:\n   89    #  def storage_path\n   90    #    File.join(\n   91:   #    SystemConfiguration.first.storage_path, 'users', email)\n   92    #  end\n   93  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/admin/inst_books/upload_books.html.haml:\n    1  - if @inst_book\n    2    %h2\n    3:     Select an updated configuration file for book: #{@inst_book.title}.\n    4  - else\n    5    %h2\n    6:     Select a configuration file to upload.\n    7  \n    8  = form_tag upload_create_admin_inst_books_path, id: :upload_book, multipart: true do\n    9    = file_field('form', 'file')\n   10:   - confirm_msg = \"Are you sure you want to upload new book configuration\"+\"\\n\"\n   11    - if @inst_book\n   12:     - confirm_msg = \"Are you sure you want to update book configuration: \"+\"\\n\"+\"Id: \"+@inst_book.id.to_s+\"\\n\"+\"Title: '\"+ @inst_book.title+\"'\"+\"\\n\"\n   13      = hidden_field(:inst_book, :id)\n   14    = submit_tag 'Submit File', data: { confirm: confirm_msg }\n   ..\n   22        $('#upload_book').submit(function (e) {\n   23          if ($(this).find('#form_file').val() == '') {\n   24:           alert('Please select a book configuration file to upload!');\n   25            e.preventDefault();\n   26          }\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/configurations/book/show.html.haml:\n   83    #instructions-link-container\n   84      Instructions/documentation for this interface can be found \n   85:     <a target=\"_blank\" href=\"https://opendsa.readthedocs.io/en/latest/Configuration.html#book-configuration-gui\">here</a>.\n   86  \n   87    %h2\n   88:     Load Existing Configuration (Optional)\n   89    .col-xs-12.row\n   90      %label.dialog-control-label.col-lg-3.col-sm-4{for: 'reference-config'}\n   91:       Select Reference Configuration\n   92      .col-xs-4\n   93        %select.form-control#reference-config\n   ..\n  101    .col-xs-12.row\n  102      %label.dialog-control-label.col-lg-3.col-sm-4{for: 'user-config'}\n  103:       Select Your Configuration\n  104      .col-xs-4\n  105        %select.form-control#user-config\n  ...\n  116    .col-xs-12.row\n  117      %label.dialog-control-label.col-lg-3.col-sm-4{for: 'upload-config-file'}\n  118:       Select Configuration File\n  119      .col-xs-4\n  120        %input.inline-input{type: 'file', id: 'upload-config-file', accept: '.json'}\n  ...\n  330        #submit-button-container\n  331          %button#btn-update-config.btn.btn-primary{type: 'submit', value: \"update\", style: 'display: none;'}\n  332:           Update Configuration\n  333          %button#btn-save-config.btn.btn-primary{type: 'submit', value: \"save\"}\n  334:           Save New Configuration\n  335          %button#btn-download-config.btn.btn-primary{type: 'submit',value: \"download\"}\n  336:           Download Configuration\n  337        \n  338  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/home/about.html.haml:\n   60    For instructors, we have support for making assignments and tracking\n   61    your students' progress through the material. Materials are created\n   62:   using the OpenDSA authoring and configuration tools.\n   63  \n   64  %p\n   ..\n   80      any\n   81      =link_to \"collection of modules,\", home_books_path\n   82:     as defined by an editable configuration file,\n   83      making it easy for an instructor to create a custom textbook\n   84      for a class.\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/home/books.html.haml:\n  117    course with OpenDSA materials. Any new Canvas course needs its\n  118    OpenDSA materials pushed to it directly by our standard course\n  119:   configuration process, otherwise the links will not work correctly.\n  120  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/home/guide.html.haml:\n   74  \n   75    %li\n   76:     Go to your Canvas course and click the \"Settings\" link in the left sidebar. Click the \"Apps\" tab and then click \"View App Configurations\".\n   77  \n   78    %li\n   79:     Click \"+ App\" to add a new LTI application. Select \"By URL\" under the \"Configuration Type\" dropdown menu. Write \"OpenDSA\" in the name field. Paste in the\n   80      %code Consumer Key\n   81      and the\n   82      %code Shared Secret that\n   83:     you copied in the earlier step. Finally, add the OpenDSA LTI configuration URL\n   84      %code #{@config_url}\n   85      to the \"Config URL\" field and click \"Submit\".\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/inst_books/_inst_book.html.haml:\n   15    /         .modal-content\n   16    /           .modal-header\n   17:   /             %p.lead Book Configuration\n   18    /           .modal-body\n   19    /             %p\n   20    /               This view will allow instructors to configure OpenDSA book before they generate the canvas course. Instructors can add/delete OpenDSA chapters/modules, reorder chapters/modules if needed,\n   21:   /               and adjust exercises points and due dates in addition to general book configuration like programming\n   22    /               language used for the book code examples.\n   23    /               Once the course is generated, Instructors can only adjust exercises points and due dates.\n   24    /             %p\n   25:   /               Note: In order for the book configuration changes to take effect, Canvas course has to be re-generated using \"Generate Canvas Course\" button.\n   26    %td\n   27      - if inst_book.last_compiled == nil\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/inst_books/configure.html.haml:\n    4  %ol.breadcrumb\n    5    %li= link_to 'Home', root_path\n    6:   %li.active= 'Book Configuration'\n    7  \n    8  .row\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/layouts/_navbar.html.haml:\n   28            - if (current_user.global_role.is_instructor? or current_user.global_role.is_admin?)\n   29              %li\n   30:               %a{href: configurations_book_path}\n   31                  Create Book\n   32  \n   33        %ul.nav.navbar-nav.navbar-right.nav-top\n   34          - if user_signed_in?\n   35:           - if current_user.global_role.can_edit_system_configuration?\n   36              %li= link_to icon_tag_for('wrench'), admin_dashboard_path\n   37            - elsif current_user.global_role.is_instructor?\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/application.rb:\n   11    class Application < Rails::Application\n   12      # Settings in config/environments/* take precedence over those specified here.\n   13:     # Application configuration should go into files in config/initializers\n   14      # -- all .rb files in that directory are automatically loaded.\n   15  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/deploy.rb:\n  182          Rails.cache.delete('odsa_all_exercises_map')\n  183  \n  184:         # used by app/controllers/configurations/book_controller.rb\n  185          Rails.cache.delete('odsa_reference_book_configs')\n  186          Rails.cache.delete('odsa_available_modules')\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/routes.rb:\n   55    post 'inst_books/:id' => 'inst_books#compile', defaults: { format: 'js', data: {type: \"script\"} }, as: :compile\n   56    get 'inst_books/configure/:id' => 'inst_books#configure', as: :book_configure\n   57:   get 'inst_books/configurations/:id' => 'inst_books#configuration', as: :book_configuration\n   58    resources :inst_books\n   59  \n   60:   # book configuration interface\n   61:   namespace :configurations do\n   62      get 'book' => 'book#show'\n   63    end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/initializers/active_admin.rb:\n   45    #\n   46    # This will ONLY change the title for the admin section. Other\n   47:   # namespaces will continue to use the main \"site_title\" configuration.\n   48  \n   49    # == User Authentication\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/initializers/devise.rb:\n    1  # Use this hook to configure devise mailer, warden hooks and so forth.\n    2: # Many of these configuration options can be set straight in your model.\n    3  Devise.setup do |config|\n    4    # The secret key used by Devise. Devise uses this key to generate\n    .\n    7    config.secret_key = Rails.application.secrets.secret_key_base\n    8  \n    9:   # ==> Mailer Configuration\n   10    # Configure the e-mail address which will be shown in Devise::Mailer,\n   11    # note that it will be overwritten if you use your own mailer class\n   ..\n   18    config.mailer = 'Devise::Mailer'\n   19  \n   20:   # ==> ORM configuration\n   21    # Load and configure the ORM. Supports :active_record (default) and\n   22    # :mongoid (bson_ext recommended) by default. Other ORMs may be\n   ..\n   24    require 'devise/orm/active_record'\n   25  \n   26:   # ==> Configuration for any authentication mechanism\n   27    # Configure which keys are used when authenticating a user. The default is\n   28    # just :email. You can configure it to use [:username, :subdomain], so for\n   ..\n   97    # config.clean_up_csrf_token_on_authentication = true\n   98  \n   99:   # ==> Configuration for :database_authenticatable\n  100    # For bcrypt, this is the cost for hashing the password and defaults to 10.\n  101    # If using other encryptors, it sets how many times you want the password\n  ...\n  110    config.pepper = Rails.application.secrets.devise_pepper\n  111  \n  112:   # ==> Configuration for :confirmable\n  113    # A period that the user is allowed to access the website even without\n  114    # confirming his account. For instance, if set to 2.days, the user will be\n  ...\n  136    # config.confirmation_keys = [ :email ]\n  137  \n  138:   # ==> Configuration for :rememberable\n  139    # The time the user will be remembered without asking for credentials again.\n  140    config.remember_for = 3.months\n  ...\n  147    config.rememberable_options = { secure: true }\n  148  \n  149:   # ==> Configuration for :validatable\n  150    # Range for password length. Default is 8..128.\n  151    config.password_length = 8..128\n  ...\n  156    # config.email_regexp = /\\A[^@]+@[^@]+\\z/\n  157  \n  158:   # ==> Configuration for :timeoutable\n  159    # The time you want to timeout the user session without activity. After this\n  160    # time the user will be asked for credentials again. Default is 30 minutes.\n  ...\n  164    # config.expire_auth_token_on_timeout = false\n  165  \n  166:   # ==> Configuration for :lockable\n  167    # Defines which strategy will be used to lock an account.\n  168    # :failed_attempts = Locks an account after a number of failed attempts to\n  ...\n  189    # config.unlock_in = 1.hour\n  190  \n  191:   # ==> Configuration for :recoverable\n  192    #\n  193    # Defines which key will be used when recovering the password for an account\n  ...\n  199    config.reset_password_within = 6.hours\n  200  \n  201:   # ==> Configuration for :encryptable\n  202    # Allow you to use another encryption algorithm besides bcrypt (default).\n  203    # You can use :sha1, :sha512 or encryptors from others authentication tools\n  ...\n  209    # config.encryptor = :sha512\n  210  \n  211:   # ==> Configuration for :token_authenticatable\n  212    # Defines name of the authentication token params key\n  213    # config.token_authentication_key = :auth_token\n  214  \n  215:   # ==> Scopes configuration\n  216    # Turn scoped views on. Before rendering \"sessions/new\", it will first check\n  217    # for \"users/sessions/new\". It's turned off by default because it's slower\n  ...\n  223    # config.default_scope = :user\n  224  \n  225:   # Set this configuration to false if you want /users/sign_out to sign out\n  226    # only the current scope. By default, Devise signs out all scopes.\n  227    # config.sign_out_all_scopes = true\n  228  \n  229:   # ==> Navigation configuration\n  230    # Lists the formats that should be treated as navigational. Formats like\n  231    # :html, should redirect to the sign in page when the user does not have\n  ...\n  246    # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'\n  247  \n  248:   # ==> Warden configuration\n  249    # If you want to use other strategies, that are not supported by Devise, or\n  250    # change the failure app, you can configure them inside the config.warden\n  ...\n  268    #\n  269  \n  270:   # ==> Mountable engine configurations\n  271    # When using Devise inside an engine, let's call it `MyEngine`, and this\n  272:   # engine is mountable, there are some extra configurations to be taken into\n  273    # account. The following options are available, assuming the engine is\n  274    # mounted as:\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/initializers/friendly_id.rb:\n    1: # FriendlyId Global Configuration\n    2  #\n    3: # Use this to set up shared configuration options for your entire application.\n    4: # Any of the configuration options shown here can also be applied to single\n    5  # models by passing arguments to the `friendly_id` class method or defining\n    6  # methods in your model.\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/schema.rb:\n  136      t.string  \"name\",                                          null: false\n  137      t.boolean \"can_manage_all_courses\",        default: false, null: false\n  138:     t.boolean \"can_edit_system_configuration\", default: false, null: false\n  139      t.boolean \"builtin\",                       default: false, null: false\n  140    end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/seeds.rb:\n   40    name:                          'Administrator',\n   41    builtin:                       true,\n   42:   can_edit_system_configuration: true,\n   43    can_manage_all_courses:        true)\n   44  \n   45  GlobalRole.create!(name:         'Instructor',\n   46    builtin:                       true,\n   47:   can_edit_system_configuration: false,\n   48    can_manage_all_courses:        false)\n   49  \n   50  GlobalRole.create!(name:         'Regular User',\n   51    builtin:                       true,\n   52:   can_edit_system_configuration: false,\n   53    can_manage_all_courses:        false)\n   54  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/migrate/20130916142010_create_global_roles.rb:\n    4        t.string :name, :unique => true, :null => false\n    5        t.boolean :can_manage_all_courses, :null => false, :default => false\n    6:       t.boolean :can_edit_system_configuration, :null => false, :default => false\n    7        t.boolean :builtin, :null => false, :default => false\n    8      end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/ERD/model_report/table_details.html:\n  614      <tr>\n  615        <td class=\"subitem_table_field\"></td>\n  616:       <td class=\"subitem_table_field\">can_edit_system_configuration</td>\n  617        <td class=\"subitem_table_field\">TINYINT(1)</td>\n  618        <td class=\"subitem_table_field\">Yes</td>\n  ...\n  681        <td class=\"subitem_table_field\">Yes</td>\n  682        <td class=\"subitem_table_field\"></td>\n  683:       <td class=\"subitem_table_field\">inst_book_section_exercises table defines a configuration of an exercise in a section </td>\n  684      </tr>\n  685  \n  ...\n  776        <td class=\"subitem_table_field\">No</td>\n  777        <td class=\"subitem_table_field\">NULL</td>\n  778:       <td class=\"subitem_table_field\">Exercise specific configurations (e.g. code language used)</td>\n  779      </tr>\n  780  \n  ...\n  870        <td class=\"subitem_table_field\">Yes</td>\n  871        <td class=\"subitem_table_field\"></td>\n  872:       <td class=\"subitem_table_field\">Defines OpenDSA Book configuration used by a course offering</td>\n  873      </tr>\n  874  \n  ...\n  924        <td class=\"subitem_table_field\">No</td>\n  925        <td class=\"subitem_table_field\">'0'</td>\n  926:       <td class=\"subitem_table_field\">Whether the book configuration is used as a template\n  927  that instractor can clone and change it.</td>\n  928      </tr>\n  ...\n 1212        <td class=\"subitem_table_field\">Yes</td>\n 1213        <td class=\"subitem_table_field\"></td>\n 1214:       <td class=\"subitem_table_field\">Defines OpenDSA Book configuration used by a course offering</td>\n 1215      </tr>\n 1216  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/log/development.log:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/spec/factories/global_roles.rb:\n    6  #  name                          :string(255)      default(\"\"), not null\n    7  #  can_manage_all_courses        :boolean          default(FALSE), not null\n    8: #  can_edit_system_configuration :boolean          default(FALSE), not null\n    9  #  builtin                       :boolean          default(FALSE), not null\n   10  #\n   ..\n   16      name \"Administrator\"\n   17      can_manage_all_courses true\n   18:     can_edit_system_configuration true\n   19      builtin true\n   20    end\n   ..\n   23    \tname \"Instructor\"\n   24    \tcan_manage_all_courses false\n   25:   \tcan_edit_system_configuration false\n   26    \tbuiltin false\n   27    end\n   ..\n   30    \tname \"Regular User\"\n   31   \t  can_manage_all_courses false\n   32:   \tcan_edit_system_configuration false\n   33   \t  builtin false\n   34    end\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/spec/models/global_role_spec.rb:\n    6  #  name                          :string(255)      default(\"\"), not null\n    7  #  can_manage_all_courses        :boolean          default(FALSE), not null\n    8: #  can_edit_system_configuration :boolean          default(FALSE), not null\n    9  #  builtin                       :boolean          default(FALSE), not null\n   10  #\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sass/1dd0621892ef11e5e81420fa518252a37f30f89f/book.scssc:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/01b649afacff3bc43aca82ad7ea6b860:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/04815176b18d23ced953077cdab6c799:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/0aa0df868901b7dee0ffdb60d2654fa2:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/0d23776e6c867d2efc99fe64b2a337f7:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/0f1559138e32cbab28f180c9934ca266:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/17eec0ddb9b9f29bb5cf341a93040cef:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/18372d3a54f6e7f76385c4d8f5b7e960:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/186739aaa444dc333746406595d3b96a:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/1b3a1829929822f67d07c422737ac8be:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/24c0b41a529874f089a8a18c61a4c00b:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/24f3e734036ceda017d7cc80c1d98ff8:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/254583103a7629f682e85eef7c0a95c2:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/264a6e8d1ab3b9c8b70420f450ce887a:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/2bd2d44616a6b5597cd9ed67588ecb69:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/2c646556f32fa84abeac44e6e306becf:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/2d64f918ff69c018e5010a2b3c8d3106:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/2da9e9839122f099bcf954260e3b4391:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/2fa2b588829d4bb581a6ef3f8b162699:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/37eca64221e07509920f8c72a7b703be:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/39fa00a948072165efa4773ddd4cb864:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/3c089a6a18bb9f880684e494ba6d9b61:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/430babcebaf007cb85a8d3891aea2254:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/48832c4a9dd69a66d0767e62f426e0dc:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/4adf0f734f43c5b6ae4f444379d4e81b:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/4dd6436613f042820ba431bc94658480:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/4f0da5012e8e8cf2291eb17e2ee09f1b:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/51eda86588c6b73ed7ca036e60a83092:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/53681afaf07c0ceb1b669dc052946c00:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/5845297410f679a612a158495ae107f6:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/596790a5f88943fc1618a3d195ad8f55:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/633db9fabf91b7de36d73ed4e59a5b42:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/699ac9ebb9394ea770f54768a69c6de9:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/712514c31f32b527077c8aa138956ba8:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/718b06f749d489442622d623110390d1:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/73f7b6e8c1cb2ed08a82eead090ab07c:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/7a6d340b64633d7c90930c37d49922b4:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/7aa6ca65af176c54e4e7c93c8eee5a7f:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/7e0a29d5223e871492da045d021c7c36:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/8084b4645f3b8d814bf8280403d1bdc3:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/82435e42ae4bcb7928b3fb78d50f6fbe:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/834db9510e1f71e48dacc0f7814c11ee:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/85d0a40112453b12218343bccdbffbe3:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/8d75aeca5bc64cdb3cb75838afdaecf1:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/98d4d9635172e801911c61cd0d652d11:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/9a2ba00411970198c847a87447b76c62:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/9ec8ee4af6dade1bfa4fb504821e8ef6:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/a52ca182cbda27f26d4864630485e50b:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/a5f50c01e75cc70ebf23908a3ca47fb2:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/a75bb7d40dba7323cb154f5a61c0d6d3:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/af3f7c98928aabca41b1d5e8ee3003ac:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/b56d616f93ad504380e0067f8198b77c:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/b61d53c3890ad358df55d74bd5591142:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/babdf913c0c250f0f1f07909b297e3b9:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/bd37c6fc9ddb593630059ec37c70b0bc:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/c8606277eea2df74dee89aa29c75f21a:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/cabc56568225d7fcd698e8ec4d8e316b:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/cffd775d018f68ce5dba1ee0d951a994:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/d33738101b5288e22902d8223aaf054e:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/d4e4327e3ac9d8d3c58acc5b63dc5789:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/d5c972962439eaae01ee278bfa3a55be:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/e2238f8232f05b1ae170604dfa35e14c:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/e5558a44265a441dc6347ed3ea132af4:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/e8e445d89100131d07e77e96909a0606:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/f1690ac18551c315174b0ff8d2149e39:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/f74e990e1c9ea8af8bcaa5b78035a2e7:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/tmp/cache/assets/development/sprockets/fde1436fa4582b552e806053708eab3b:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/vendor/assets/bower_components/angular/angular.js:\n   24   * @description\n   25   * Configure several aspects of error handling in AngularJS if used as a setter or return the\n   26:  * current configuration if used as a getter. The following options are supported:\n   27   *\n   28   * - **objectMaxDepth**: The maximum depth to which objects are traversed when stringified for error messages.\n   29   *\n   30:  * Omitted or undefined options will leave the corresponding configuration values unchanged.\n   31   *\n   32:  * @param {Object=} config - The configuration object. May only contain the options that need to be\n   33   *     updated. Supported keys:\n   34   *\n   ..\n 1908   *     function that will be invoked by the injector as a `config` block.\n 1909   *     See: {@link angular.module modules}\n 1910:  * @param {Object=} config an object for defining configuration options for the application. The\n 1911   *     following keys are supported:\n 1912   *\n ....\n 2245       * # Module\n 2246       *\n 2247:      * A module is a collection of services, directives, controllers, filters, and configuration information.\n 2248       * `angular.module` is used to configure the {@link auto.$injector $injector}.\n 2249       *\n ....\n 2274       * @param {!string} name The name of the module to create or retrieve.\n 2275       * @param {!Array.<string>=} requires If specified then new module is being created. If\n 2276:      *        unspecified then the module is being retrieved for further configuration.\n 2277:      * @param {Function=} configFn Optional configuration function for the module. Same as\n 2278       *        {@link angular.Module#config Module#config()}.\n 2279       * @returns {angular.Module} new module with the {@link angular.Module} api.\n ....\n 2543             * @module ng\n 2544             * @param {Function} configFn Execute this function on module load. Useful for service\n 2545:            *    configuration.\n 2546             * @description\n 2547             * Use this method to register work which needs to be performed on module loading.\n ....\n 4500   * function to get the instance of the **service**.\n 4501   *\n 4502:  * Often services have no configuration options and there is no need to add methods to the service\n 4503   * provider.  The provider will be no more than a constructor function with a `$get` property. For\n 4504   * these cases the {@link auto.$provide $provide} service has additional helper methods to register\n ....\n 4536   * {@link ng.$logProvider $logProvider}.\n 4537   *\n 4538:  * Service provider objects can have additional methods which allow configuration of the provider\n 4539   * and its service. Importantly, you can configure what kind of service is created by the `$get`\n 4540   * method, or how that service will act. For example, the {@link ng.$logProvider $logProvider} has a\n ....\n 4718   *\n 4719   * Value services are similar to constant services, except that they cannot be injected into a\n 4720:  * module configuration function (see {@link angular.Module#config}) but they can be overridden by\n 4721   * an Angular {@link auto.$provide#decorator decorator}.\n 4722   *\n ....\n 4749   *\n 4750   * But unlike {@link auto.$provide#value value}, a constant can be\n 4751:  * injected into a module configuration function (see {@link angular.Module#config}) and it cannot\n 4752   * be overridden by an Angular {@link auto.$provide#decorator decorator}.\n 4753   *\n ....\n 8275     * are always isolated (i.e. `scope: {}`) and are always restricted to elements (i.e. `restrict: 'E'`).\n 8276     *\n 8277:    * Component definitions are very simple and do not require as much configuration as defining general\n 8278     * directives. Component definitions usually consist only of a template and a controller backing it.\n 8279     *\n ....\n 11416     * By default, this is an array with one request transformation function:\n 11417     *\n 11418:    *   - If the `data` property of the request configuration object contains an object, serialize it\n 11419     *     into JSON format.\n 11420     *\n .....\n 11556       *\n 11557       * ## General usage\n 11558:      * The `$http` service is a function which takes a single argument — a {@link $http#usage configuration object} —\n 11559       * that is used to generate an HTTP request and returns  a {@link ng.$q promise}.\n 11560       *\n .....\n 11579       *   - **status** – `{number}` – HTTP status code of the response.\n 11580       *   - **headers** – `{function([headerName])}` – Header getter function.\n 11581:      *   - **config** – `{Object}` – The configuration object that was used to generate the request.\n 11582       *   - **statusText** – `{string}` – HTTP status text of the response.\n 11583       *\n .....\n 11627       *\n 11628       * The $http service will automatically add certain HTTP headers to all requests. These defaults\n 11629:      * can be fully configured by accessing the `$httpProvider.defaults.headers` configuration\n 11630:      * object, which currently contains this default configuration:\n 11631       *\n 11632       * - `$httpProvider.defaults.headers.common` (headers that are common for all requests):\n .....\n 11637       *   - `Content-Type: application/json`\n 11638       *\n 11639:      * To add or overwrite these defaults, simply add or remove a property from these configuration\n 11640       * objects. To add headers for an HTTP method other than POST or PUT, simply add a new object\n 11641       * with the lowercased HTTP method name as the key, e.g.\n .....\n 11700       * an array with one function that does the following:\n 11701       *\n 11702:      * - If the `data` property of the request configuration object contains an object, serialize it\n 11703       *   into JSON format.\n 11704       *\n .....\n 11714       *\n 11715       * If you wish to override the request/response transformations only for a single request then provide\n 11716:      * `transformRequest` and/or `transformResponse` properties on the configuration object passed\n 11717       * into `$http`.\n 11718       *\n .....\n 12075  \n 12076        if (!isObject(requestConfig)) {\n 12077:         throw minErr('$http')('badreq', 'Http request configuration must be an object.  Received: {0}', requestConfig);\n 12078        }\n 12079  \n 12080        if (!isString($sce.valueOf(requestConfig.url))) {\n 12081:         throw minErr('$http')('badreq', 'Http request configuration url must be a string or a $sce trusted object.  Received: {0}', requestConfig.url);\n 12082        }\n 12083  \n .....\n 12221       * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;\n 12222       *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.\n 12223:      * @param {Object=} config Optional configuration object\n 12224       * @returns {HttpPromise} Future object\n 12225       */\n .....\n 12234       * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;\n 12235       *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.\n 12236:      * @param {Object=} config Optional configuration object\n 12237       * @returns {HttpPromise} Future object\n 12238       */\n .....\n 12247       * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;\n 12248       *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.\n 12249:      * @param {Object=} config Optional configuration object\n 12250       * @returns {HttpPromise} Future object\n 12251       */\n .....\n 12285       * @param {string|TrustedObject} url Absolute or relative URL of the resource that is being requested;\n 12286       *                                   or an object created by a call to `$sce.trustAsResourceUrl(url)`.\n 12287:      * @param {Object=} config Optional configuration object\n 12288       * @returns {HttpPromise} Future object\n 12289       */\n .....\n 12299       * @param {string} url Relative or absolute URL specifying the destination of the request\n 12300       * @param {*} data Request content\n 12301:      * @param {Object=} config Optional configuration object\n 12302       * @returns {HttpPromise} Future object\n 12303       */\n .....\n 12312       * @param {string} url Relative or absolute URL specifying the destination of the request\n 12313       * @param {*} data Request content\n 12314:      * @param {Object=} config Optional configuration object\n 12315       * @returns {HttpPromise} Future object\n 12316       */\n .....\n 12325        * @param {string} url Relative or absolute URL specifying the destination of the request\n 12326        * @param {*} data Request content\n 12327:       * @param {Object=} config Optional configuration object\n 12328        * @returns {HttpPromise} Future object\n 12329        */\n .....\n 12335           *\n 12336           * @description\n 12337:          * Runtime equivalent of the `$httpProvider.defaults` property. Allows configuration of\n 12338           * default headers, withCredentials as well as request and response transformations.\n 12339           *\n .....\n 19018   * - and you have an open redirect at `http://myapp.example.com/clickThru?...`.\n 19019   *\n 19020:  * Here is what a secure configuration for this scenario might look like:\n 19021   *\n 19022   * ```\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/vendor/assets/bower_components/jstree/dist/jstree.js:\n  259  \t$.jstree.defaults.core = {\n  260  \t\t/**\n  261: \t\t * data configuration\n  262  \t\t *\n  263  \t\t * If left as `false` the HTML inside the jstree container element is used to populate the tree (that should be an unordered list with list items).\n  ...\n  365  \t\tmultiple\t\t: true,\n  366  \t\t/**\n  367: \t\t * theme configuration object\n  368  \t\t * @name $.jstree.defaults.core.themes\n  369  \t\t */\n  ...\n 7141  \n 7142  \t/**\n 7143: \t * massload configuration\n 7144  \t *\n 7145  \t * It is possible to set this to a standard jQuery-like AJAX config.\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/vendor/assets/bower_components/jstree/src/jstree.js:\n  259  \t$.jstree.defaults.core = {\n  260  \t\t/**\n  261: \t\t * data configuration\n  262  \t\t *\n  263  \t\t * If left as `false` the HTML inside the jstree container element is used to populate the tree (that should be an unordered list with list items).\n  ...\n  365  \t\tmultiple\t\t: true,\n  366  \t\t/**\n  367: \t\t * theme configuration object\n  368  \t\t * @name $.jstree.defaults.core.themes\n  369  \t\t */\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/vendor/assets/bower_components/jstree/src/jstree.massload.js:\n   22  \n   23  \t/**\n   24: \t * massload configuration\n   25  \t *\n   26  \t * It is possible to set this to a standard jQuery-like AJAX config.\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/vendor/assets/bower_components/jstree/src/misc.js:\n  481  \n  482          /**\n  483:          * parentsload configuration\n  484           *\n  485:          * The configuration syntax is almost the same as for core.data option. You must set parenstload.data the following:\n  486           *\n  487           * parentsload: {\n  ...\n  520  \n  521                          var callError = function(number, message) {\n  522:                                 self._data.core.last_error = { 'error' : 'configuration', 'plugin' : 'parentsload', 'id' : 'parentsload_' + number, 'reason' : message, 'data' : JSON.stringify({config: parentsloadSettings}) };\n  523                                  self.settings.core.error.call(self, self._data.core.last_error);\n  524                          }\n  525  \n  526                          if(!parentsloadSettings) {\n  527:                                 callError('01', 'The configuration must be presented')\n  528                                  return\n  529                          }\n  ...\n  558                          } else if (typeof parentsloadSettings === 'object') {\n  559                                  if (! (parentsloadSettings.url || parentsloadSettings.data)) {\n  560:                                         callError('02', 'The \"data.url\" or \"data.data\" must be presented in configuration')\n  561                                          return\n  562                                  }\n  ...\n  565  \n  566                          } else {\n  567:                                 callError('03', 'The appropriate \"data.url\" or \"data.data\" must be presented in configuration')\n  568                          }\n  569                  }\n\n735 matches across 109 files\n\n\nSearching 2011 files for \"/vagrant/OpenDSA/config\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Configuration:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/RST:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA:\n    ERROR: Unable to open file\n\n0 matches\n\nSearching 819 files for \"= stylesheet_link_tag 'application', media: 'all'\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Configuration:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/RST:\n    ERROR: Unable to open file\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/layouts/header.html.haml:\n    4      %title OpenDSA\n    5      %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }\n    6:     = stylesheet_link_tag 'application', media: 'all'\n    7      = javascript_include_tag 'application'\n    8      -#= stylesheet_link_tag 'theme/dark/theme', media: 'all'\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/layouts/lti_resource.html.haml:\n    3      %title OpenDSA\n    4      %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }\n    5:     = stylesheet_link_tag 'application', media: 'all'\n    6      = javascript_include_tag 'application', media: 'all'\n    7      = stylesheet_link_tag 'theme/warm/theme', media: 'all'\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/log/development.log:\n    <binary>\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA:\n    ERROR: Unable to open file\n\n7 matches across 3 files\n\n\nSearching 649 files for \"students_count\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/admin/course_offering.rb:\n   60      column :lms_instance, sortable: 'lms_instance.url'\n   61      if current_user.global_role.is_admin?\n   62:       column :students_count, sortable: 'students count'\n   63      end\n   64  \n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/helpers/active_admin/resources_helper.rb:\n   26  \n   27  \n   28:     def course_offering_delete_msg(course_offering, students_count)\n   29        course_offering_name = course_offering.display_name\n   30        inst_book = InstBook.where(:course_offering_id => course_offering.id)\n   ..\n   37          message2 = \"The course contains '#{book_title}' book\"\n   38        end\n   39:       message1 = \"*** READ CAREFULLY ***\\n\\nYou are about to delete #{course_offering_name} course. The course is linked to '#{lms_url}' instance, it also has **#{students_count}** subscribed students!.\"\n   40        message3 = \"\\n\\nAlso notice that deleting this course will erase **ALL** students interactions data and exercises progress information.\\n\\nAre you sure you want to proceed with the delete?\"\n   41        return message1 + message2 + message3\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/course_offering.rb:\n  112  \n  113  \n  114:   def students_count\n  115      course_enrollments.where(course_role: CourseRole.student).count\n  116    end\n\n4 matches across 3 files\n\n\nSearching 7118 files for \"hash = JSON.load(File.read(output_file_path))\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/admin/inst_book.rb:\n   70        stdout = %x(python #{script_path} #{input_file} #{output_file_path})\n   71  \n   72:       hash = JSON.load(File.read(output_file_path))\n   73        if params.has_key?(:inst_book)\n   74          InstBook.save_data_from_json(hash, current_user, params[:inst_book][\"id\"])\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/controllers/inst_books_controller.rb:\n   39      stdout = %x(python #{script_path} #{input_file_path} #{output_file_path})\n   40  \n   41:     hash = JSON.load(File.read(output_file_path))\n   42  \n   43      InstBook.save_data_from_json(hash, current_user, inst_book['inst_book_id'])\n\n2 matches across 2 files\n\n\nSearching 7118 files for \"import xmltodict\"\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA/tools/rst2json.py:\n   16  import sys, os\n   17  import json\n   18: import xmltodict\n   19  import re\n   20  from docutils import nodes, utils\n\n/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA/tools/simple2full.py:\n    4  import sys, os\n    5  import json\n    6: import xmltodict\n    7  import re\n    8  \n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 60834,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "public/OpenDSA/tools/simple2full.py",
+			"settings":
+			{
+				"buffer_size": 27090,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/inst_books_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2523,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/admin/inst_book.rb",
+			"settings":
+			{
+				"buffer_size": 5063,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/header.html.haml",
+			"settings":
+			{
+				"buffer_size": 791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/environment.rb",
+			"settings":
+			{
+				"buffer_size": 395,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -39,10 +368,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 299.0,
+		"last_filter": "tasks",
 		"selected_items":
 		[
+			[
+				"tasks",
+				"Set Syntax: Tasks"
+			],
 			[
 				"instal",
 				"Package Control: Install Package"
@@ -64,7 +397,7 @@
 				"ReadmePlease"
 			]
 		],
-		"width": 485.0
+		"width": 444.0
 	},
 	"console":
 	{
@@ -85,10 +418,36 @@
 	},
 	"expanded_folders":
 	[
-		"/home/hshahin/workspaces/OpenDSA-LTI"
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI"
 	],
 	"file_history":
 	[
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/admin/inst_book.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/helpers/active_admin/resources_helper.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Dockerfile",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/lib/tasks/sample_data.rake",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/spec/factories/courses.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/spec/factories/course_offerings.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/spec/factories/learning_tool.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/.env",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/bin/delayed_job",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/schema.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Gemfile",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/docker-compose.yml",
+		"/var/folders/_t/7pygb03n6t7_w_xr698m36840000gn/T/tasks.todo",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/secrets.yml",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/database.yml",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/.gitignore",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/admin/course_offering.rb",
+		"/Users/hshahin/.ssh/known_hosts",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/lib/RST/rst_parser.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/ability.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/inst_chapter.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/inst_section.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/inst_book.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/deploy.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/admin/lms_instance.rb",
+		"/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/course_offering.rb",
 		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/controllers/users_controller.rb",
 		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/schema.rb",
 		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/views/organizations/show.html.haml",
@@ -190,43 +549,18 @@
 		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/legacy_base.rb",
 		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/app/models/course_enrollment.rb",
 		"/tmp/MySQL: Create db",
-		"/home/hshahin/.config/sublime-text-3/Packages/User/Gist.sublime-settings",
-		"/home/hshahin/workspaces/OpenDSA-LTI/db/schema.rb",
-		"/home/hshahin/workspaces/OpenDSA-LTI/db/migrate/20160516222111_create_database_structure.rb",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/migrate/20160403151536_add_role_to_users.rb",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/migrate/001_create_database.rb",
-		"/tmp/Rails: Creating a Rails Instance from an Existing MySQL DB",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/migrate/20160403151530_add_name_to_users.rb",
-		"/home/hshahin/workspaces/OpenDSA-LTI/Gemfile.lock",
-		"/home/hshahin/workspaces/OpenDSA-LTI/Gemfile",
-		"/home/hshahin/workspaces/OpenDSA-LTI/config/rare_map.yml",
-		"/tmp/OpenDSA clear student state",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/config/legacy:.yml",
-		"/tmp/code-workout",
-		"/tmp/Shell: install hh tool",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/README.md",
-		"/home/hshahin/.config/sublime-text-3/Packages/Gist/Gist.sublime-settings",
-		"/home/hshahin/workspaces/OpenDSA-LTI/OpenDSA-LTI.sh",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/public/OpenDSA",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-DevStack.sh",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA/Makefile",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-server/ODSA-django/settings.py",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA/config/testLTI_LMSconf.json",
-		"/home/hshahin/workspaces/OpenDSA-LTI/Vagrantfile",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/OpenDSAenv/lib/python2.7/site-packages/django_app_lti/views.py",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/OpenDSAenv/lib/python2.7/site-packages/django_auth_lti/middleware_patched.py",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI/OpenDSA-LTI/settings/base.py",
-		"/home/hshahin/workspaces/OpenDSA-DevStack/django.sh"
+		"/home/hshahin/.config/sublime-text-3/Packages/User/Gist.sublime-settings"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 101.0,
 		"where_history":
 		[
+			"",
 			"/home/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
 			""
 		]
@@ -236,6 +570,73 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"3000",
+			"ssl",
+			"nginx",
+			"crt",
+			"nginx",
+			"import xmltodict",
+			"hash = JSON.load(File.read(output_file_path))",
+			"students_count",
+			"neufert4",
+			"= stylesheet_link_tag 'application', media: 'all'",
+			"/vagrant/OpenDSA/config",
+			"Configuration",
+			"/workspace",
+			"staging",
+			"Enable",
+			"\n#",
+			"app",
+			"RAILS_ENV",
+			"bcrypt",
+			"rails",
+			"learning_tool",
+			"code-workout",
+			"course_offering_term_1_tr",
+			"courses",
+			"user_id",
+			"index_organizations_on_display_name",
+			"mysql2",
+			"SECURE_CONNECTION",
+			"migrate",
+			"reset",
+			"populate",
+			"dotenv",
+			"env",
+			"POSTGRES",
+			"db-data",
+			"192",
+			"course_offering_delete_msg",
+			"trailer",
+			"message2",
+			"Are you sure you want to delete this?",
+			"message",
+			"upload",
+			"upload_books_admin_inst_books_path",
+			"course_offering_delete_msg",
+			"inst_book",
+			"actions",
+			"confirmation_message",
+			"students_count",
+			"Delete",
+			"course_offering_delete_msg",
+			"confirmation_message",
+			"+ ",
+			"delete",
+			"confirmation_message",
+			"book_title",
+			"confirmation_message",
+			"message1",
+			"Are you sure you want to proceed with the delete?",
+			", dependent:",
+			"course_enrollments",
+			"enrollment",
+			"User",
+			"managed_by_user",
+			"role_for_user",
+			"permit_params",
+			"book_type",
+			"archived",
 			"libsqlite3-dev",
 			"sqlite3",
 			"bundle",
@@ -296,74 +697,7 @@
 			"to_param",
 			"normalize_friendly_id",
 			"wigu/active_admin_theme",
-			"devise",
-			"users",
-			"User.find",
-			"OpenDsa",
-			"Open Dsa Lti",
-			"Open Dsa",
-			"book",
-			"1st_load_framework",
-			"active_admin_comments",
-			"authenticate_admin",
-			"%li= link_to 'Sign up', new_user_registration_path",
-			"admin_root",
-			"new_user_registration_path",
-			"global_role",
-			"user_signed_in?",
-			"devise_for :users, ActiveAdmin::Devise.config",
-			"AdminUser",
-			"admin_users",
-			"is_admin",
-			"sign_out_via",
-			"Open Dsa Lti",
-			"small",
-			"book",
-			"1st_load_framework",
-			"new_admin_user_session",
-			"sass",
-			"fa-sign-out",
-			"admin_users",
-			"reset_password_token",
-			"user@example.com",
-			"< OldDbBase",
-			"user@example.com",
-			"coding_exercise",
-			"workout_with_exercises",
-			"Faker",
-			"instructor",
-			"set_default_global_role",
-			"email_or_id",
-			"email",
-			"email_or_id",
-			"search",
-			"set_default_role",
-			"email_or_id",
-			"set_default_role",
-			"course_offerings\"",
-			"< OldDbBase",
-			"slug",
-			"t.string   \"slug\"",
-			"true",
-			"default",
-			"organization",
-			"Virginia Tech",
-			", :reset",
-			", force: :cascade",
-			"\"book_roles\"",
-			"created_at",
-			"avatar",
-			"last_name",
-			"time_zone_id",
-			"first_name",
-			"confirmation_token",
-			"created_at",
-			"confirmation_sent_at",
-			"confirmed_at",
-			"string",
-			"confirmation_token",
-			"time_zone_id",
-			", force: :cascade"
+			"devise"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -383,18 +717,1847 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Dockerfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								544
+							]
+						],
+						"settings":
+						{
+							"spell_check": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/var/folders/_t/7pygb03n6t7_w_xr698m36840000gn/T/tasks.todo",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1798,
+								1798
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"do-update": true,
+							"gist_description": "tasks: OpenDSA-LTI",
+							"gist_filename": "tasks.todo",
+							"gist_html_url": "https://gist.github.com/ed3e4212d9b3e00910af13aa7ed5d317",
+							"gist_url": "https://api.github.com/gists/ed3e4212d9b3e00910af13aa7ed5d317",
+							"plain_tasks_remain_time_phantoms":
+							[
+							],
+							"syntax": "Packages/PlainTasks/PlainTasks.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 37364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4747,
+								4747
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Configuring OpenDSA, using config/CS3.json",
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2797.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/var/folders/_t/7pygb03n6t7_w_xr698m36840000gn/T/canvas: access_token",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								19,
+								85
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"do-update": true,
+							"gist_description": "",
+							"gist_filename": "canvas: access_token",
+							"gist_html_url": "https://gist.github.com/95921af91d4d8cfb31edf3db00f92aac",
+							"gist_url": "https://api.github.com/gists/95921af91d4d8cfb31edf3db00f92aac",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/OpenDSA/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6454,
+								6454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "bootstrap.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2527,
+								2531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 469.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".dockerignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								64,
+								64
+							]
+						],
+						"settings":
+						{
+							"auto_name": "bundles",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "config/deploy.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6028,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5463,
+								5482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2356.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1055
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# https://github.com/phusion/passenger-docker",
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "docker/secret_key.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 59,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# /etc/nginx/main.d/secret_key.conf:",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "docker/gzip_max.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# /etc/nginx/conf.d/gzip_max.conf:",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "docker/webapp.conf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# /etc/nginx/sites-enabled/webapp.conf:",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "Dockerfile_old",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1108
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "runservers.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 89,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "app/admin/course_offering.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2252,
+								2252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "app/helpers/active_admin/resources_helper.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1338,
+								1338
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "app/models/course_offering.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3542,
+								3556
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1192.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								762,
+								762
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								877,
+								881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "docker-compose.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								353,
+								353
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"file": "log/development.log",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2668614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8481,
+								8481
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": ".env",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14010,
+								14010
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9946.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "app/views/course_offerings/_form.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								951,
+								951
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 164.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 60834,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										142,
+										151
+									],
+									[
+										448,
+										457
+									],
+									[
+										809,
+										818
+									],
+									[
+										827,
+										836
+									],
+									[
+										1036,
+										1045
+									],
+									[
+										1053,
+										1062
+									],
+									[
+										1100,
+										1109
+									],
+									[
+										1363,
+										1372
+									],
+									[
+										1623,
+										1632
+									],
+									[
+										1787,
+										1796
+									],
+									[
+										2214,
+										2223
+									],
+									[
+										2425,
+										2434
+									],
+									[
+										2728,
+										2741
+									],
+									[
+										2931,
+										2944
+									],
+									[
+										3454,
+										3467
+									],
+									[
+										3791,
+										3804
+									],
+									[
+										4083,
+										4096
+									],
+									[
+										4468,
+										4481
+									],
+									[
+										4687,
+										4700
+									],
+									[
+										5170,
+										5183
+									],
+									[
+										5273,
+										5286
+									],
+									[
+										5324,
+										5337
+									],
+									[
+										5497,
+										5510
+									],
+									[
+										5694,
+										5707
+									],
+									[
+										5905,
+										5918
+									],
+									[
+										5970,
+										5983
+									],
+									[
+										5993,
+										6006
+									],
+									[
+										6202,
+										6215
+									],
+									[
+										6430,
+										6443
+									],
+									[
+										6544,
+										6557
+									],
+									[
+										6626,
+										6639
+									],
+									[
+										6800,
+										6813
+									],
+									[
+										6922,
+										6935
+									],
+									[
+										7133,
+										7146
+									],
+									[
+										7288,
+										7301
+									],
+									[
+										7390,
+										7403
+									],
+									[
+										7490,
+										7503
+									],
+									[
+										7535,
+										7548
+									],
+									[
+										7566,
+										7579
+									],
+									[
+										7687,
+										7700
+									],
+									[
+										7748,
+										7761
+									],
+									[
+										7843,
+										7856
+									],
+									[
+										7955,
+										7968
+									],
+									[
+										7994,
+										8007
+									],
+									[
+										8153,
+										8166
+									],
+									[
+										8292,
+										8305
+									],
+									[
+										8505,
+										8518
+									],
+									[
+										8716,
+										8729
+									],
+									[
+										8920,
+										8933
+									],
+									[
+										9106,
+										9119
+									],
+									[
+										9239,
+										9252
+									],
+									[
+										9407,
+										9420
+									],
+									[
+										9476,
+										9489
+									],
+									[
+										9711,
+										9724
+									],
+									[
+										9859,
+										9872
+									],
+									[
+										9992,
+										10005
+									],
+									[
+										10235,
+										10248
+									],
+									[
+										10506,
+										10519
+									],
+									[
+										10834,
+										10847
+									],
+									[
+										10977,
+										10990
+									],
+									[
+										11163,
+										11176
+									],
+									[
+										11291,
+										11304
+									],
+									[
+										11534,
+										11547
+									],
+									[
+										11969,
+										11982
+									],
+									[
+										12463,
+										12476
+									],
+									[
+										12509,
+										12522
+									],
+									[
+										13056,
+										13069
+									],
+									[
+										13201,
+										13214
+									],
+									[
+										13495,
+										13508
+									],
+									[
+										13712,
+										13725
+									],
+									[
+										13882,
+										13895
+									],
+									[
+										14046,
+										14059
+									],
+									[
+										14470,
+										14483
+									],
+									[
+										14804,
+										14817
+									],
+									[
+										14971,
+										14984
+									],
+									[
+										15098,
+										15111
+									],
+									[
+										15332,
+										15345
+									],
+									[
+										15480,
+										15493
+									],
+									[
+										15833,
+										15846
+									],
+									[
+										16123,
+										16136
+									],
+									[
+										16400,
+										16413
+									],
+									[
+										16627,
+										16640
+									],
+									[
+										16873,
+										16886
+									],
+									[
+										16970,
+										16983
+									],
+									[
+										17205,
+										17218
+									],
+									[
+										17315,
+										17328
+									],
+									[
+										17682,
+										17695
+									],
+									[
+										18057,
+										18070
+									],
+									[
+										18081,
+										18094
+									],
+									[
+										18156,
+										18169
+									],
+									[
+										18317,
+										18330
+									],
+									[
+										18535,
+										18548
+									],
+									[
+										18750,
+										18763
+									],
+									[
+										19063,
+										19076
+									],
+									[
+										19189,
+										19202
+									],
+									[
+										19322,
+										19335
+									],
+									[
+										19642,
+										19655
+									],
+									[
+										19801,
+										19814
+									],
+									[
+										20158,
+										20171
+									],
+									[
+										20476,
+										20489
+									],
+									[
+										20596,
+										20609
+									],
+									[
+										20836,
+										20849
+									],
+									[
+										21147,
+										21160
+									],
+									[
+										21528,
+										21541
+									],
+									[
+										21820,
+										21833
+									],
+									[
+										22181,
+										22194
+									],
+									[
+										22464,
+										22477
+									],
+									[
+										22685,
+										22698
+									],
+									[
+										23084,
+										23097
+									],
+									[
+										23407,
+										23420
+									],
+									[
+										23873,
+										23886
+									],
+									[
+										23908,
+										23921
+									],
+									[
+										23934,
+										23947
+									],
+									[
+										24003,
+										24016
+									],
+									[
+										24047,
+										24060
+									],
+									[
+										24356,
+										24369
+									],
+									[
+										24601,
+										24614
+									],
+									[
+										24872,
+										24885
+									],
+									[
+										25117,
+										25130
+									],
+									[
+										25354,
+										25367
+									],
+									[
+										25661,
+										25674
+									],
+									[
+										25967,
+										25980
+									],
+									[
+										26240,
+										26253
+									],
+									[
+										26483,
+										26496
+									],
+									[
+										26692,
+										26705
+									],
+									[
+										26978,
+										26991
+									],
+									[
+										27223,
+										27236
+									],
+									[
+										27428,
+										27441
+									],
+									[
+										27694,
+										27707
+									],
+									[
+										27885,
+										27898
+									],
+									[
+										28143,
+										28156
+									],
+									[
+										28361,
+										28374
+									],
+									[
+										28661,
+										28674
+									],
+									[
+										28900,
+										28913
+									],
+									[
+										29050,
+										29063
+									],
+									[
+										29304,
+										29317
+									],
+									[
+										29362,
+										29375
+									],
+									[
+										29433,
+										29446
+									],
+									[
+										29883,
+										29896
+									],
+									[
+										30219,
+										30232
+									],
+									[
+										30419,
+										30432
+									],
+									[
+										30623,
+										30636
+									],
+									[
+										30989,
+										31002
+									],
+									[
+										31341,
+										31354
+									],
+									[
+										31675,
+										31688
+									],
+									[
+										31925,
+										31938
+									],
+									[
+										32173,
+										32186
+									],
+									[
+										32418,
+										32431
+									],
+									[
+										32701,
+										32714
+									],
+									[
+										33241,
+										33254
+									],
+									[
+										33494,
+										33507
+									],
+									[
+										33649,
+										33662
+									],
+									[
+										33808,
+										33821
+									],
+									[
+										34144,
+										34157
+									],
+									[
+										44070,
+										44083
+									],
+									[
+										44348,
+										44361
+									],
+									[
+										44430,
+										44443
+									],
+									[
+										44740,
+										44753
+									],
+									[
+										44974,
+										44987
+									],
+									[
+										45372,
+										45385
+									],
+									[
+										45438,
+										45451
+									],
+									[
+										45805,
+										45818
+									],
+									[
+										46061,
+										46074
+									],
+									[
+										46486,
+										46499
+									],
+									[
+										46863,
+										46876
+									],
+									[
+										47149,
+										47162
+									],
+									[
+										47521,
+										47534
+									],
+									[
+										47835,
+										47848
+									],
+									[
+										48093,
+										48106
+									],
+									[
+										48447,
+										48460
+									],
+									[
+										48825,
+										48838
+									],
+									[
+										48900,
+										48913
+									],
+									[
+										49199,
+										49212
+									],
+									[
+										49532,
+										49545
+									],
+									[
+										49852,
+										49865
+									],
+									[
+										50048,
+										50061
+									],
+									[
+										50265,
+										50278
+									],
+									[
+										50673,
+										50686
+									],
+									[
+										51047,
+										51060
+									],
+									[
+										51421,
+										51434
+									],
+									[
+										51795,
+										51808
+									],
+									[
+										52088,
+										52101
+									],
+									[
+										52381,
+										52394
+									],
+									[
+										52677,
+										52690
+									],
+									[
+										52913,
+										52926
+									],
+									[
+										53189,
+										53202
+									],
+									[
+										53439,
+										53452
+									],
+									[
+										53686,
+										53699
+									],
+									[
+										53814,
+										53827
+									],
+									[
+										54090,
+										54103
+									],
+									[
+										54337,
+										54350
+									],
+									[
+										54577,
+										54590
+									],
+									[
+										54843,
+										54856
+									],
+									[
+										54897,
+										54910
+									],
+									[
+										55228,
+										55241
+									],
+									[
+										55643,
+										55656
+									],
+									[
+										56064,
+										56077
+									],
+									[
+										56348,
+										56361
+									],
+									[
+										57300,
+										57349
+									],
+									[
+										57690,
+										57739
+									],
+									[
+										58350,
+										58364
+									],
+									[
+										58593,
+										58607
+									],
+									[
+										59019,
+										59033
+									],
+									[
+										59430,
+										59444
+									],
+									[
+										59817,
+										59862
+									],
+									[
+										60199,
+										60244
+									],
+									[
+										60550,
+										60566
+									],
+									[
+										60766,
+										60782
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								60663,
+								60663
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/hshahin/workspaces/OpenDSA-DevStack/OpenDSA-LTI",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 7,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 26282.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "public/OpenDSA/tools/simple2full.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27090,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								696,
+								696
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"file": "app/controllers/inst_books_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1657,
+								1702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 32.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "app/admin/inst_book.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5063,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2573,
+								2573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 817.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "app/views/layouts/header.html.haml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								791,
+								791
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "config/environment.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 25.0
 	},
 	"input":
 	{
-		"height": 34.0
+		"height": 37.0
 	},
 	"layout":
 	{
@@ -427,7 +2590,7 @@
 	"project": "OpenDSA-LTI.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -437,16 +2600,168 @@
 		"selected_items":
 		[
 			[
+				"read",
+				"README.md"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"docker",
+				"Dockerfile"
+			],
+			[
+				"webap",
+				"docker/webapp.conf"
+			],
+			[
+				"weba",
+				"docker/webapp.conf"
+			],
+			[
+				"com",
+				"docker-compose.yml"
+			],
+			[
 				"boot",
 				"bootstrap.sh"
 			],
 			[
-				"database",
-				"~/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/migrate/20160516222111_create_database_structure.rb"
+				"make",
+				"public/OpenDSA/Makefile"
+			],
+			[
+				"deploy",
+				"config/deploy.rb"
+			],
+			[
+				"helper",
+				"app/helpers/active_admin/resources_helper.rb"
+			],
+			[
+				"modelcourse",
+				"app/models/course_offering.rb"
+			],
+			[
+				"modelcourseoffering",
+				"app/models/course_offering.rb"
+			],
+			[
+				"admincourseoffer",
+				"app/admin/course_offering.rb"
+			],
+			[
+				"run",
+				"runservers.sh"
+			],
+			[
+				"environment.rb",
+				"config/environment.rb"
+			],
+			[
+				"dock",
+				"Dockerfile"
 			],
 			[
 				"gem",
-				"~/workspaces/OpenDSA-DevStack/OpenDSA-LTI/Gemfile"
+				"Gemfile"
+			],
+			[
+				"ignore",
+				".gitignore"
+			],
+			[
+				".rake",
+				"lib/tasks/sample_data.rake"
+			],
+			[
+				"schem",
+				"db/schema.rb"
+			],
+			[
+				"task",
+				"lib/tasks/sample_data.rake"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"del",
+				"bin/delayed_job"
+			],
+			[
+				"secre",
+				"config/secrets.yml"
+			],
+			[
+				"comp",
+				"docker-compose.yml"
+			],
+			[
+				"tasks",
+				"/var/folders/_t/7pygb03n6t7_w_xr698m36840000gn/T/tasks.todo"
+			],
+			[
+				"admincourse",
+				"app/admin/course_offering.rb"
+			],
+			[
+				"admincourseoff",
+				"app/admin/course_offering.rb"
+			],
+			[
+				"ability",
+				"app/models/ability.rb"
+			],
+			[
+				"admininst",
+				"app/admin/inst_book.rb"
+			],
+			[
+				"admininstbook",
+				"app/admin/inst_book.rb"
+			],
+			[
+				"modelinstboo",
+				"app/models/inst_book.rb"
+			],
+			[
+				"modelinstch",
+				"app/models/inst_chapter.rb"
+			],
+			[
+				"modelinstbook",
+				"app/models/inst_book.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"courseoffer",
+				"app/admin/course_offering.rb"
+			],
+			[
+				"course",
+				"app/admin/course_offering.rb"
+			],
+			[
+				"courseoffering",
+				"app/admin/course_offering.rb"
+			],
+			[
+				"instbo",
+				"app/admin/inst_book.rb"
+			],
+			[
+				"rst_parser",
+				"lib/RST/rst_parser.rb"
+			],
+			[
+				"database",
+				"~/workspaces/OpenDSA-DevStack/OpenDSA-LTI/db/migrate/20160516222111_create_database_structure.rb"
 			],
 			[
 				"vag",
@@ -469,18 +2784,6 @@
 				"OpenDSA-LTI/app/models/inst_book_owner.rb"
 			],
 			[
-				"modelinstbook",
-				"OpenDSA-LTI/app/models/inst_book.rb"
-			],
-			[
-				"sche",
-				"OpenDSA-LTI/db/schema.rb"
-			],
-			[
-				"schema",
-				"OpenDSA-LTI/db/schema.rb"
-			],
-			[
 				"organizationshow",
 				"OpenDSA-LTI/app/views/organizations/show.html.haml"
 			],
@@ -489,20 +2792,12 @@
 				"OpenDSA-LTI/app/controllers/organizations_controller.rb"
 			],
 			[
-				".rake",
-				"OpenDSA-LTI/lib/tasks/sample_data.rake"
-			],
-			[
 				"user_contro",
 				"OpenDSA-LTI/app/controllers/users_controller.rb"
 			],
 			[
 				"user",
 				"OpenDSA-LTI/app/models/user.rb"
-			],
-			[
-				"ability",
-				"OpenDSA-LTI/app/models/ability.rb"
 			],
 			[
 				"users_controller",
@@ -555,10 +2850,6 @@
 			[
 				"navi",
 				"OpenDSA-LTI/app/views/layouts/_navigation_links.html.haml"
-			],
-			[
-				"modelcourse",
-				"OpenDSA-LTI/app/models/course.rb"
 			],
 			[
 				"schme",
@@ -635,10 +2926,6 @@
 			[
 				"user_cont",
 				"OpenDSA-LTI/app/controllers/users_controller.rb"
-			],
-			[
-				"run",
-				"runservers.sh"
 			],
 			[
 				"application",
@@ -761,10 +3048,6 @@
 				"OpenDSA-LTI/app/models/organization.rb"
 			],
 			[
-				"course",
-				"OpenDSA-LTI/app/models/course.rb"
-			],
-			[
 				"organization",
 				"OpenDSA-LTI/app/models/organization.rb"
 			],
@@ -809,10 +3092,6 @@
 				"OpenDSA/config/testLTI_LMSconf.json"
 			],
 			[
-				"make",
-				"OpenDSA/Makefile"
-			],
-			[
 				"lmscon",
 				"OpenDSA/config/CS3114_LMSconf.json"
 			],
@@ -831,10 +3110,6 @@
 			[
 				".sh",
 				"OpenDSA-DevStack.sh"
-			],
-			[
-				"base",
-				"OpenDSA-LTI/OpenDSA-LTI/settings/base.py"
 			]
 		],
 		"width": 0.0
@@ -873,7 +3148,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 278.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -37,20 +37,15 @@ RUN rm -f /etc/service/nginx/down
 
 # Configure Nginx and Passenger
 RUN rm /etc/nginx/sites-enabled/default
-ADD ./docker/webapp.conf /etc/nginx/sites-enabled/webapp.conf
+ADD ./docker/opendsa-lti.conf /etc/nginx/sites-enabled/opendsa-lti.conf
 ADD ./server.crt /etc/nginx/server.crt
 ADD ./server.key /etc/nginx/server.key
 ADD ./docker/secret_key.conf /etc/nginx/main.d/secret_key.conf
 ADD ./docker/gzip_max.conf /etc/nginx/conf.d/gzip_max.conf
 
-RUN mkdir /home/app/webapp
-WORKDIR /home/app/webapp
-COPY . ./
+WORKDIR /tmp
+ADD ./Gemfile Gemfile
+ADD ./Gemfile.lock Gemfile.lock
+ADD ./public/OpenDSA/requirements.txt requirements.txt
 RUN gem install bundler && bundle install --jobs 20 --retry 5
-RUN pip install -r public/OpenDSA/requirements.txt --upgrade
-
-RUN chown -R app:app /home/app/webapp/
-RUN chmod -R 775 /home/app/webapp/
-
-# expose the port
-EXPOSE 3000
+RUN pip install -r requirements.txt --upgrade

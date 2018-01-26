@@ -1,0 +1,1 @@
+docker push opendsa/opendsa-lti_app:1.0.0

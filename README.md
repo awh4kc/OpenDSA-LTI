@@ -49,6 +49,7 @@ The following server requirements will be fine for supporting hundreds of users.
 ### Creating `deploy` user on your production server
   - The first thing we will do on our new server is to create the user account we'll be using to run OpenDSA-LTI and work from there. Open a new terminal, ssh to your production server, and do the following
   ```
+  # Production server terminal 
   $ sudo adduser deploy
   $ sudo adduser deploy sudo
   $ su deploy
@@ -58,27 +59,31 @@ The following server requirements will be fine for supporting hundreds of users.
   $ touch authorized_keys
   ```
 
-  - Before we move forward is that we're going to setup SSH to authenticate via keys instead of having to use a password to login. It's more secure and will save you time in the long run. **Switch back to OpenDSA-DevStack terminal** to append the new public key to `deploy@<prod_server>`:.ssh/authorized_keys and enter `deploy` user password one last time:
+  - Before we move forward we're going to setup SSH to authenticate via keys instead of having to use a password to login to your production server. It's more secure and will save you time in the long run. **Switch back to OpenDSA-DevStack terminal** to append the new public key to .ssh/authorized_keys on your production server.
   ```
+  # OpenDSA-DevStack terminal
   $ cd
   $ cat .ssh/id_rsa.pub | ssh deploy@<prod_server> 'cat >> .ssh/authorized_keys'
   ```
-  - For now you can ssh to you production server from within OpenDSA-DevStack without password
+  - Form now on you can ssh to you production server from within OpenDSA-DevStack without password
   ```
+  # OpenDSA-DevStack terminal
   $ ssh deploy@<prod_server>
   ```
 
-  - For the next steps, **make sure you are logged in as the `deploy` user on the production server!**
+  - For the next steps, **make sure you are logged in with the `deploy` user on the production server!**
 
 ### Installing Ruby
 
   - The first step is to install some dependencies for Ruby.
   ```
+  # Production server terminal
   $ sudo apt-get update
   $ sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev dkms libxslt-dev libpq-dev python-dev python-pip python-feedvalidator python-sphinx libmariadbclient-dev libevent-dev libsqlite3-dev
   ```
   - Next we're going to be installing Ruby using rbenv.
   ```
+  # Production server terminal
   $ cd
   $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
   $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
@@ -96,6 +101,7 @@ The following server requirements will be fine for supporting hundreds of users.
 
   - The last step is to install Bundler
   ```
+  # Production server terminal
   $ gem install bundler
   ```
 
@@ -105,33 +111,39 @@ The following server requirements will be fine for supporting hundreds of users.
 
   - Phusion is the company that develops Passenger and they recently put out an official Ubuntu package that ships with Nginx and Passenger pre-installed. We'll be using that to setup our production server because it's very easy to setup.
   ```
+  # Production server terminal
   $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7
   $ sudo apt-get install -y apt-transport-https ca-certificates
   ```
 
   - Add Passenger APT repository
   ```
+  # Production server terminal
   $ sudo sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list'
   $ sudo apt-get update
   ```
 
   - Install Passenger & Nginx
   ```
+  # Production server terminal
   $ sudo apt-get install -y nginx-extras passenger
   ```
 
   - So now we have Nginx and passenger installed. We can manage the Nginx webserver by using the service command:
   ```
+  # Production server terminal
   $ sudo service nginx start
   ```
 
   - Open up the server's IP address in your browser to make sure that nginx is up and running. The service command also provides some other methods such as `restart` and `stop` that allow you to easily restart and stop your webserver.
   - Next, we need to update the Nginx configuration file and update a couple of things. You'll want to open up `/etc/nginx/nginx.conf` in your favorite editor or simply use nano:
   ```
+  # Production server terminal
   $ sudo nano /etc/nginx/nginx.conf
   ```
   - First, change user from `www-data` to `deploy`
   ```
+  # Production server terminal
   user `deploy`;
   worker_processes auto;
   pid /run/nginx.pid;
@@ -144,6 +156,7 @@ The following server requirements will be fine for supporting hundreds of users.
   ```
   - Second, point Passenger to the version of Ruby that we're using. Find the following lines in the configuration file
   ```
+  # Production server terminal
   ##
   # Phusion Passenger
   ##
@@ -157,10 +170,12 @@ The following server requirements will be fine for supporting hundreds of users.
   ```
   - The `passenger_ruby` is the important line here. Once you've changed `passenger_ruby` to use the right version Ruby, you can restart Nginx with the new Passenger configuration.
   ```
+  # Production server terminal
   $ sudo service nginx start
   ```
   - Now that we've restarted Nginx, the OpenDSA-LTI will be served up using the `deploy` user. We can make sure that our web server will restart automatically when the server is rebooted by typing:
   ```
+  # Production server terminal
   $ sudo update-rc.d nginx defaults
   ```
   - This should already be enabled by default, so you may see a message like this:
@@ -172,6 +187,7 @@ The following server requirements will be fine for supporting hundreds of users.
 ### Setting Up MySQL server
   - You can install MySQL server and client from the packages in the Ubuntu repository. As part of the installation process, you'll set the password for the root user. This information will go into your OpenDSA-LTI database.yml file in the future.
   ```
+  # Production server terminal
   $ sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
   ```
 
@@ -179,6 +195,7 @@ The following server requirements will be fine for supporting hundreds of users.
 
   - Now we will create a new database and user `opendsa` for OpenDSA-LTI application. First login to mysql
   ```
+  # Production server terminal
   $ mysql -uroot -p
   ```
   - Then create `opendsa` database
@@ -195,6 +212,7 @@ The following server requirements will be fine for supporting hundreds of users.
   - Node.js is required by Rails assets pipeline.
 
   ```
+  # Production server terminal
   $ sudo apt-get install -y nodejs
   $ sudo ln -s /usr/bin/nodejs /usr/sbin/node
   $ sudo npm install -g jshint
@@ -207,6 +225,7 @@ The following server requirements will be fine for supporting hundreds of users.
   - OpenDSA contains all the book contents that will be served by OpenDSA-LTI Rails application. You only need to clone OpenDSA under `deploy` home directory, Then all the linking between OpenDSA and OpenDSA-LTI will happen automatically through the automated deployment tasks.
 
   ```
+  # Production server terminal
   $ cd
   $ git clone https://github.com/OpenDSA/OpenDSA.git
   $ cd OpenDSA
@@ -219,6 +238,7 @@ The following server requirements will be fine for supporting hundreds of users.
   - You need to make some changes to OpenDSA-LTI repository related to your specific production server. To do that you need to fork [OpenDSA-LTI](https://github.com/OpenDSA/OpenDSA-LTI) to your GitHub account and then add your own repository as a remote to OpenDSA-LTI in OpenDSA-DevStack. This way you can make your own changes to OpenDSA-LTI and keep up to date with the latest changes done in the originial repository.
   - In your OpenDSA-DevStack terminal, add your forked repository, replace `your_username` with you github account
   ```
+  # OpenDSA-DevStack terminal
   $ cd /vagrant/OpenDSA-LTI
   $ git remote add forked https://github.com/your_username/OpenDSA-LTI.git
   ```
@@ -275,13 +295,15 @@ The following server requirements will be fine for supporting hundreds of users.
   - **Switch to OpenDSA-DevStack terminal**
   - Deploy OpenDSA-LTI for the first time **(this step will fail!)**. But it will create OpenDSA-LTI folder structure in the production server.
   ```
+  # OpenDSA-DevStack terminal
   $ cd /vagrant/OpenDSA-LTI
   $ bundle exec cap production deploy
   ```
 
-  - First-time deployment failed because the shared files `database.yaml` and `secrets.yaml` weren't created on the production server yet.
+  - First-time deployment failed because the shared files `database.yml` and `secrets.yml` weren't created on the production server yet.
   - **Switch back to the production server terminal** and do the following
   ```
+  # Production server terminal
   $ cd /home/deploy/OpenDSA-LTI/shared/config
   $ touch database.yml
   $ touch secrets.yml
@@ -290,6 +312,7 @@ The following server requirements will be fine for supporting hundreds of users.
   - You need to put database credentials in database.yml and generate a new secret for production and save it in secrets.yml.
   - First update databse.yml
   ```
+  # Production server terminal
   $ cd /home/deploy/OpenDSA-LTI/shared/config
   $ sudo nano database.yml
   ```
@@ -315,12 +338,14 @@ The following server requirements will be fine for supporting hundreds of users.
 
   - Second update secrets.yml. To generate a new secret go to OpenDSA-DevStack terminal
   ```
+  # Production server terminal
   $ cd /vagrant/OpenDSA-LTI
   $ rake secret
   ```
 
   - A new secret will be generated, copy that string and past it in secrets.yml file on the production server. Open secrets.yml file
   ```
+  # Production server terminal
   $ cd /home/deploy/OpenDSA-LTI/shared/config
   $ sudo nano secrets.yml
   ```
@@ -336,12 +361,14 @@ The following server requirements will be fine for supporting hundreds of users.
 
   - Now production server is ready for deployment, **switch back to OpenDSA-DevStack terminal** and execute the following
   ```
+  # OpenDSA-DevStack terminal
   $ cd /vagrant/OpenDSA-LTI
   $ bundle exec cap production deploy
   ```
 
   - If you have configured a staging server you can deploy your changes to the staging server the same way as the production. Switch to OpenDSA-DevStack terminal and execute the following
   ```
+  # OpenDSA-DevStack terminal
   $ cd /vagrant/OpenDSA-LTI
   $ bundle exec cap staging deploy
   ```

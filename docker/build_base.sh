@@ -1,0 +1,6 @@
+echo Building opendsa-lti_base image ...
+docker build -t opendsa/opendsa-lti_base:1.0.0 . -f Dockerfile_base
+
+sleep 1
+echo Pushing opendsa-lti_base image ...
+docker push opendsa/opendsa-lti_base:1.0.0
