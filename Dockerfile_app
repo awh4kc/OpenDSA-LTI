@@ -4,10 +4,10 @@ FROM opendsa/opendsa-lti_base:1.0.1
 RUN mkdir /home/app/OpenDSA-LTI
 WORKDIR /home/app/OpenDSA-LTI
 COPY . ./
+RUN bundle exec rake assets:precompile --trace
 
 RUN chown -R app:app /home/app/OpenDSA-LTI/
 RUN chmod -R 775 /home/app/OpenDSA-LTI/
-RUN bundle exec rake assets:precompile --trace
 
 # expose the port
 EXPOSE 80

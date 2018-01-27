@@ -21,19 +21,19 @@ namespace :db do
     offerings[5] = FactoryGirl.create(:course_offering_term_3_mwf)
 
     admin = FactoryGirl.create(:admin)
-    teacher = FactoryGirl.create(:instructor_user,
-          first_name: 'Ima',
-          last_name:  'Teacher',
-          email:      "example-1@railstutorial.org")
+    # teacher = FactoryGirl.create(:instructor_user,
+    #       first_name: 'Ima',
+    #       last_name:  'Teacher',
+    #       email:      "example-1@railstutorial.org")
 
 
-    students = []
-    50.times do |n|
-        students[n] = FactoryGirl.create(:confirmed_user,
-          first_name: Faker::Name.first_name,
-          last_name:  Faker::Name.last_name,
-          email:      "example-#{n+2}@railstutorial.org")
-    end
+    # students = []
+    # 50.times do |n|
+    #     students[n] = FactoryGirl.create(:confirmed_user,
+    #       first_name: Faker::Name.first_name,
+    #       last_name:  Faker::Name.last_name,
+    #       email:      "example-#{n+2}@railstutorial.org")
+    # end
 
     offerings.each do |c|
       FactoryGirl.create(:course_enrollment,
@@ -41,16 +41,16 @@ namespace :db do
         course_offering: c,
         course_role: CourseRole.instructor)
 
-      FactoryGirl.create(:course_enrollment,
-        user: teacher,
-        course_offering: c,
-        course_role: CourseRole.instructor)
+      # FactoryGirl.create(:course_enrollment,
+      #   user: teacher,
+      #   course_offering: c,
+      #   course_role: CourseRole.instructor)
 
-      50.times do |n|
-        FactoryGirl.create(:course_enrollment,
-          user: students[n],
-          course_offering: c)
-      end
+      # 50.times do |n|
+      #   FactoryGirl.create(:course_enrollment,
+      #     user: students[n],
+      #     course_offering: c)
+      # end
     end
   end
 

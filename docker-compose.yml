@@ -7,12 +7,6 @@ volumes:
   odsa-books:
     external: false
 
-  odsa-tmp:
-    external: false
-
-  odsa-log:
-    external: false
-
 services:
   db:
     env_file: .env
@@ -22,6 +16,13 @@ services:
     volumes:
       - "db-data:/var/lib/mysql"
 
+  app_migrate:
+    env_file: .env
+    image: opendsa/opendsa-lti_app:1.0.1
+    depends_on:
+      - db
+    command: ["./docker/rake_db_migrate.sh"]
+
   app:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
@@ -30,22 +31,14 @@ services:
       - "443:443"
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
-      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
-      - "odsa-log:/home/app/OpenDSA-LTI/log"
     depends_on:
-      - db
-    # command: ["./wait-for-it.sh", "db:3306", "--", "./docker-entrypoint.sh"]
-    tty: true
-
+      - app_migrate
 
   jobs:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
-      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
-      - "odsa-log:/home/app/OpenDSA-LTI/log"
     command: bundle exec rake jobs:work
     depends_on:
-      - db
-    tty: true
+      - app_migrate
