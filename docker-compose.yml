@@ -7,6 +7,15 @@ volumes:
   odsa-books:
     external: false
 
+  odsa-tmp:
+    external: false
+
+  odsa-log:
+    external: false
+
+networks:
+  opendsa-lti:
+
 services:
   db:
     env_file: .env
@@ -15,6 +24,8 @@ services:
       - "3306:3306"
     volumes:
       - "db-data:/var/lib/mysql"
+    networks:
+      - opendsa-lti
 
   app_migrate:
     env_file: .env
@@ -22,23 +33,47 @@ services:
     depends_on:
       - db
     command: ["./docker/rake_db_migrate.sh"]
+    networks:
+      - opendsa-lti
 
   app:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
+    deploy:
+      replicas: 5
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
+      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
+      - "odsa-log:/home/app/OpenDSA-LTI/log"
     depends_on:
       - app_migrate
+    networks:
+      - opendsa-lti
 
   jobs:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
+      - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
+      - "odsa-log:/home/app/OpenDSA-LTI/log"
     command: bundle exec rake jobs:work
     depends_on:
       - app_migrate
+    networks:
+      - opendsa-lti
+
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - opendsa-lti
