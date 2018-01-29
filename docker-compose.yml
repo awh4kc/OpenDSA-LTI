@@ -20,6 +20,9 @@ services:
   db:
     env_file: .env
     image: mysql:5.6.34
+    deploy:
+      restart_policy:
+        condition: on-failure
     ports:
       - "3306:3306"
     volumes:
@@ -30,6 +33,10 @@ services:
   app_migrate:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 0
     depends_on:
       - db
     command: ["./docker/rake_db_migrate.sh"]
@@ -40,7 +47,9 @@ services:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
     deploy:
-      replicas: 5
+      replicas: 2
+      restart_policy:
+        condition: on-failure
     ports:
       - "80:80"
       - "443:443"
@@ -49,25 +58,31 @@ services:
       - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
       - "odsa-log:/home/app/OpenDSA-LTI/log"
     depends_on:
-      - app_migrate
+      - db
     networks:
       - opendsa-lti
 
   jobs:
     env_file: .env
     image: opendsa/opendsa-lti_app:1.0.1
+    deploy:
+      restart_policy:
+        condition: on-failure
     volumes:
       - "odsa-books:/home/app/OpenDSA-LTI/public/OpenDSA/Books"
       - "odsa-tmp:/home/app/OpenDSA-LTI/tmp"
       - "odsa-log:/home/app/OpenDSA-LTI/log"
     command: bundle exec rake jobs:work
     depends_on:
-      - app_migrate
+      - db
     networks:
       - opendsa-lti
 
   visualizer:
     image: dockersamples/visualizer:stable
+    deploy:
+      restart_policy:
+        condition: on-failure
     ports:
       - "8080:8080"
     volumes:
