@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 
 volumes:
   db-data:
@@ -32,7 +32,7 @@ services:
 
   app_migrate:
     env_file: .env
-    image: opendsa/opendsa-lti_app:1.0.1
+    image: opendsa/opendsa-lti_app
     deploy:
       restart_policy:
         condition: on-failure
@@ -45,7 +45,7 @@ services:
 
   app:
     env_file: .env
-    image: opendsa/opendsa-lti_app:1.0.1
+    image: opendsa/opendsa-lti_app
     deploy:
       replicas: 2
       restart_policy:
@@ -64,7 +64,7 @@ services:
 
   jobs:
     env_file: .env
-    image: opendsa/opendsa-lti_app:1.0.1
+    image: opendsa/opendsa-lti_app
     deploy:
       restart_policy:
         condition: on-failure

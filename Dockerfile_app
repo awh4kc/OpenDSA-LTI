@@ -1,9 +1,10 @@
 # https://github.com/phusion/passenger-docker
-FROM opendsa/opendsa-lti_base:1.0.1
+FROM opendsa/opendsa-lti_base
 
 RUN mkdir /home/app/OpenDSA-LTI
 WORKDIR /home/app/OpenDSA-LTI
 COPY . ./
+
 RUN bundle exec rake assets:precompile --trace
 
 RUN chown -R app:app /home/app/OpenDSA-LTI/
@@ -12,3 +13,7 @@ RUN chmod -R 775 /home/app/OpenDSA-LTI/
 # expose the port
 EXPOSE 80
 EXPOSE 443
+
+ENV RACK_ENV production
+ENV RAILS_ENV production
+ENV PASSENGER_APP_ENV production
