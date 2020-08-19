@@ -30,6 +30,7 @@ class CompileBookJob < ProgressJob::Base
       f.write(config_file_path)
       f.write(build_path)
       f.write(value)
+    end
   end
 
   # -------------------------------------------------------------
