@@ -22,12 +22,14 @@ class CompileBookJob < ProgressJob::Base
 
     script_path = "public/OpenDSA/tools/configure.py"
     build_path = book_path(@inst_book)
-    puts script_path
-    puts config_file_path
-    puts build_path
     value = %x(. /home/deploy/OpenDSA/.pyVenv/bin/activate && python3 #{script_path} #{config_file_path} -b #{build_path})
-    puts value
     update_progress
+
+    debug_file = "/home/deploy/debug.log"
+    File.open(debug_file_path, "w") do |f|
+      f.write(config_file_path)
+      f.write(build_path)
+      f.write(value)
   end
 
   # -------------------------------------------------------------
